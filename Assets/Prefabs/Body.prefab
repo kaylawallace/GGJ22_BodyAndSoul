@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1603863865205510277}
   - component: {fileID: 1708311035028070681}
   - component: {fileID: 2645835966857771051}
+  - component: {fileID: 4566746578097512649}
   - component: {fileID: 2645835966857771050}
   - component: {fileID: 2645835966857771049}
-  - component: {fileID: 4566746578097512649}
+  - component: {fileID: 5617871899173614647}
   m_Layer: 0
   m_Name: Body
   m_TagString: Body
@@ -34,7 +35,8 @@ Transform:
   m_LocalPosition: {x: -3.99, y: 1, z: 0.00060619414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8083504093558318032}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -162,11 +164,55 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 22fc0dd1-1214-4636-9397-3738f6b9ddc0
     m_ActionName: Soul/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5617871899173614647}
+        m_TargetAssemblyTypeName: SpellCast, Assembly-CSharp
+        m_MethodName: OnCast
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ad911260-e6d2-4320-848a-8625b2d396a0
+    m_ActionName: Body/CastSpell[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 63f996e3-80fb-4755-8a04-32aea3234a93
+    m_ActionName: Soul/Possess[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1ac8d65-45eb-40fb-9d59-8a6983bde258
+    m_ActionName: Soul/Unpossess[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d5e08ed8-ce11-4f65-9eea-a3f449f2d753
+    m_ActionName: Soul/Dash[/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard_Body
   m_DefaultActionMap: Body
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!54 &4566746578097512649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142115473137218117}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
 --- !u!143 &2645835966857771050
 CharacterController:
   m_ObjectHideFlags: 0
@@ -200,19 +246,48 @@ MonoBehaviour:
   speed: 5
   jumpHeight: 1
   gravity: -9.81
---- !u!54 &4566746578097512649
-Rigidbody:
+--- !u!114 &5617871899173614647
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7142115473137218117}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dd3f02e6954cd4b8e26c83f5c80b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 8083504093558318032}
+  orbPrefab: {fileID: 5619095814972838315, guid: 0810dc83953add648bf3ebe9754af213, type: 3}
+--- !u!1 &9026285582343699195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8083504093558318032}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8083504093558318032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026285582343699195}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.676, y: -0.01, z: 0.012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3801785326957530833}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

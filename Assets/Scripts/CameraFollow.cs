@@ -21,6 +21,8 @@ public class CameraFollow : MonoBehaviour
 
         body = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
+        targets.Add(body.transform);
+        targets.Add(soul.transform);
     }
 
     private void LateUpdate()
@@ -31,6 +33,7 @@ public class CameraFollow : MonoBehaviour
             if (body)
             {
                 targets.Add(body.transform);
+                print(body.name);
             }           
         }
 
@@ -40,6 +43,7 @@ public class CameraFollow : MonoBehaviour
             if (soul)
             {
                 targets.Add(soul.transform);
+                print(soul.name);
             }
         }
 

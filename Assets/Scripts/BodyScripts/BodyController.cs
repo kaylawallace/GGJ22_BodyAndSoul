@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class BodyController : MonoBehaviour
 {
-    [SerializeField] private float speed = 2.0f;
+    [SerializeField] public float speed = 2.0f;
     [SerializeField] private float jumpHeight = 1.0f;
     [SerializeField] private float gravity = -9.81f;
 
@@ -15,6 +15,7 @@ public class BodyController : MonoBehaviour
     private bool grounded;
     private Vector2 movInput = Vector2.zero;
     private bool jumped = false;
+    
 
     private void Start()
     {
@@ -39,7 +40,7 @@ public class BodyController : MonoBehaviour
         }
 
         vel.y += gravity * Time.deltaTime;
-        controller.Move(vel * Time.deltaTime);
+        controller.Move(vel * Time.deltaTime);       
     }
 
     public void OnMove(InputAction.CallbackContext context)

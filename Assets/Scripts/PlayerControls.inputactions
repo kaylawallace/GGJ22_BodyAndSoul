@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CastSpell",
+                    "type": "Button",
+                    "id": "ad911260-e6d2-4320-848a-8625b2d396a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -112,6 +121,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2562d788-7597-4e89-ad55-dc3b5bb7c031",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard_Body",
+                    "action": "CastSpell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -124,6 +144,33 @@
                     "type": "PassThrough",
                     "id": "22fc0dd1-1214-4636-9397-3738f6b9ddc0",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Possess",
+                    "type": "Button",
+                    "id": "63f996e3-80fb-4755-8a04-32aea3234a93",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Unpossess",
+                    "type": "Button",
+                    "id": "f1ac8d65-45eb-40fb-9d59-8a6983bde258",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "d5e08ed8-ce11-4f65-9eea-a3f449f2d753",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -193,6 +240,39 @@
                     "processors": "",
                     "groups": "Gamepad_Soul",
                     "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a9ae59c-98c3-4f64-b234-9d3e317dcd8d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad_Soul",
+                    "action": "Possess",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dde86d77-12e3-48f9-a7b0-a4b967d839d2",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad_Soul",
+                    "action": "Unpossess",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee445392-7a79-4464-9033-b63a862d9f6f",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad_Soul",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

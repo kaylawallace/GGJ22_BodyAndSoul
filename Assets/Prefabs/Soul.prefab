@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 1593580971499022644}
   - component: {fileID: 461842320776470477}
   - component: {fileID: 3791256142516402016}
-  - component: {fileID: 3848903374873790204}
   - component: {fileID: 461842320776470478}
-  - component: {fileID: 461842320776470479}
   - component: {fileID: 8031916340677067114}
   - component: {fileID: 3045948501246607869}
   m_Layer: 0
@@ -88,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3848903374873790204
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4738572689629238688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &461842320776470478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,29 +135,59 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 22fc0dd1-1214-4636-9397-3738f6b9ddc0
     m_ActionName: Soul/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8031916340677067114}
+        m_TargetAssemblyTypeName: SoulController, Assembly-CSharp
+        m_MethodName: OnPossess
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 63f996e3-80fb-4755-8a04-32aea3234a93
+    m_ActionName: Soul/Interact[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8031916340677067114}
+        m_TargetAssemblyTypeName: SoulController, Assembly-CSharp
+        m_MethodName: OnUnpossess
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f1ac8d65-45eb-40fb-9d59-8a6983bde258
+    m_ActionName: Soul/Unpossess[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8031916340677067114}
+        m_TargetAssemblyTypeName: SoulController, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d5e08ed8-ce11-4f65-9eea-a3f449f2d753
+    m_ActionName: Soul/Dash[/XInputControllerWindows/buttonWest]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad_Soul
   m_DefaultActionMap: Soul
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!143 &461842320776470479
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4738572689629238688}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8031916340677067114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.75
+  dashSpeed: 25
+  startDashTime: 0.1
 --- !u!54 &3045948501246607869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -201,4 +218,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
