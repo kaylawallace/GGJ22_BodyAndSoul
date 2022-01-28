@@ -8,6 +8,7 @@ public class SpellCast : MonoBehaviour
     private bool cast;
     public Transform firePoint;
     public GameObject orbPrefab;
+    public GameObject muzzleEffect;
 
     private bool cooling; 
 
@@ -27,8 +28,10 @@ public class SpellCast : MonoBehaviour
     }
 
     public void Cast()
-    {       
+    {
+        GameObject muzzle = Instantiate(muzzleEffect, firePoint.position, firePoint.rotation);
         Instantiate(orbPrefab, firePoint.position, firePoint.rotation);
+        Destroy(muzzle, 1f);
         cast = false;
     }
 

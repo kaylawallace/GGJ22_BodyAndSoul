@@ -6,7 +6,7 @@ public class Orb : MonoBehaviour
 {
     public float speed = 15f;
     public Rigidbody rb;
-
+    public GameObject hitEffect;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,8 @@ public class Orb : MonoBehaviour
         {
             enemy.TakeDamage(1);
         }
+        GameObject hit = Instantiate(hitEffect, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
+        Destroy(hit, 1f);
     }
 }
