@@ -8,6 +8,8 @@ public class RespawnPlayers : MonoBehaviour
     public int maxHealth = 1;
     [SerializeField]private int health;
     private bool cooling;
+    private GameObject other;
+    private Vector3 soulSpawnPosOffset = new Vector3(-1, 1, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class RespawnPlayers : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy")) {
-            print("collision");
+            //print("collision");
             TakeDamage(1);
         }
     }
@@ -29,35 +31,73 @@ public class RespawnPlayers : MonoBehaviour
         if (health <= 0)
         {
             Death();
-            
-            if (!cooling)
-            {
+
+            //if (!cooling)
+            //{
                 Respawn();
-            }           
+            //}
         }
     }
 
     public void Death()
     {
+        if (gameObject.name == "Body")
+        { 
+            other = GameObject.Find("Soul");
+            gameObject.GetComponent<BodyController>().enabled = false;
+            other.GetComponent<SoulController>().enabled = false;
+        }
+        else if (gameObject.CompareTag("Soul"))
+        {
+            other = GameObject.Find("Body");
+            other.GetComponent<BodyController>().enabled = false;
+            gameObject.GetComponent<SoulController>().enabled = false; 
+
+        }
         gameObject.GetComponent<MeshRenderer>().enabled = false;
-        StartCoroutine(RespawnTime(2f));
+        other.GetComponent<MeshRenderer>().enabled = false;
+        //StartCoroutine(RespawnTime(2f));
     }
 
     public void Respawn()
     {
-        if (gameObject.CompareTag("Body"))
+        if (gameObject.name == "Body")
         {
-            print("body");
-            gameObject.transform.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
+            gameObject.GetComponent<CharacterController>().enabled = false; 
+
+            gameObject.transform.position = spawnPoint.position;
+            other.transform.position = spawnPoint.position + soulSpawnPosOffset;
+
             gameObject.GetComponent<MeshRenderer>().enabled = true;
+            other.GetComponent<MeshRenderer>().enabled = true;
+
             health = maxHealth;
+            other.GetComponent<RespawnPlayers>().health = maxHealth;
+
+            gameObject.GetComponent<CharacterController>().enabled = true;
+
+            other.GetComponent<SoulController>().enabled = true;
+            gameObject.GetComponent<BodyController>().enabled = true;
+
         }
         
-        if (gameObject.CompareTag("Soul"))
+        else if (gameObject.CompareTag("Soul"))
         {
-            gameObject.transform.position = new Vector3(spawnPoint.position.x - 1, spawnPoint.position.y + 1, spawnPoint.position.z);
+            other.GetComponent<CharacterController>().enabled = false;
+
+            gameObject.transform.position = spawnPoint.position + soulSpawnPosOffset;
+            other.transform.position = spawnPoint.position;
+
             gameObject.GetComponent<MeshRenderer>().enabled = true;
+            other.GetComponent<MeshRenderer>().enabled = true;
+
             health = maxHealth;
+            other.GetComponent<RespawnPlayers>().health = maxHealth;
+
+            other.GetComponent<CharacterController>().enabled = true;
+
+            other.GetComponent<SoulController>().enabled = true;
+            gameObject.GetComponent<BodyController>().enabled = true;
         }
     }
 
