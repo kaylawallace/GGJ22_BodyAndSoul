@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2645835966857771050}
   - component: {fileID: 2645835966857771049}
   - component: {fileID: 5617871899173614647}
+  - component: {fileID: 4493191682459910085}
   m_Layer: 7
   m_Name: Body
   m_TagString: Body
@@ -260,7 +261,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8083504093558318032}
-  orbPrefab: {fileID: 5619095814972838315, guid: 0810dc83953add648bf3ebe9754af213, type: 3}
+  orbPrefab: {fileID: 6209882748512168713, guid: 649b91b387f78524f85cd93281050abf, type: 3}
+--- !u!114 &4493191682459910085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142115473137218117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7dd4b44a3a342c44a22ca4cad45d67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1160839690216438926, guid: 549de883b88305a44b03cd2cc08387e4, type: 3}
+  maxHealth: 1
+  health: 0
 --- !u!1 &7742202217635407207
 GameObject:
   m_ObjectHideFlags: 0
