@@ -14,6 +14,8 @@ public class SoulController : MonoBehaviour
     private Rigidbody rb;
     private Vector2 movInput = Vector2.zero;
     private Transform toPossess;
+    private float dashTime;
+    private Platform p;
 
     private bool possessed;
     private bool unpossessed;
@@ -21,9 +23,7 @@ public class SoulController : MonoBehaviour
     private bool inRange;
     private bool dashed;
     private bool cooling;
-
-    private float dashTime;
-    private float dashStartTime;
+    private bool facingRight = true;
 
     private void Start()
     {
@@ -77,22 +77,55 @@ public class SoulController : MonoBehaviour
     {
         Vector3 move = new Vector3(movInput.x, movInput.y, 0);
         rb.AddForce(move * speed);
+
+        if (movInput.x == 1 && !facingRight && !possessing)
+        {
+            Flip();
+        }
+        else if (movInput.x == -1 && facingRight && !possessing)
+        {
+            Flip();
+        }
     }
 
     public void Possess()
     {
-        if (inRange)
+        if (inRange && p)
         {
             toPossess.parent = transform;
+            gameObject.GetComponent<MeshRenderer>().enabled = false;             
+
+            if (p.limitToX)
+            {
+                rb.constraints |= RigidbodyConstraints.FreezePositionY;
+            }
+            else if (p.limitToY)
+            {
+                rb.constraints |= RigidbodyConstraints.FreezePositionX;
+            }
+
             possessing = true;
         }
     }
 
     public void Unpossess()
     {
-        if (possessing)
+        if (possessing && p)
         {
             toPossess.parent = null;
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+            
+            if (p.limitToX)
+            {
+                rb.constraints = RigidbodyConstraints.None;                
+                rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+            }
+            else if (p.limitToY)
+            {
+                rb.constraints = RigidbodyConstraints.None;
+                rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+            }
+
             possessing = false;
         }
     }
@@ -120,7 +153,8 @@ public class SoulController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Platform"))
+        p = other.GetComponent<Platform>();
+        if (p)
         {
             inRange = true;
             toPossess = other.transform;
@@ -134,5 +168,11 @@ public class SoulController : MonoBehaviour
             inRange = false;
             toPossess = null;          
         }
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180, 0);
     }
 }

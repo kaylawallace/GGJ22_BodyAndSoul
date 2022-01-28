@@ -15,7 +15,7 @@ public class BodyController : MonoBehaviour
     private bool grounded;
     private Vector2 movInput = Vector2.zero;
     private bool jumped = false;
-    
+    private bool facingRight = true;
 
     private void Start()
     {
@@ -32,6 +32,15 @@ public class BodyController : MonoBehaviour
 
         Vector3 move = new Vector3(movInput.x, 0, movInput.y);
         controller.Move(move * Time.deltaTime * speed);
+
+        if (movInput.x == 1 && !facingRight)
+        {
+            Flip();
+        }
+        else if (movInput.x == -1 && facingRight)
+        {
+            Flip();
+        }
 
         // Changes the height position of the player..
         if (jumped && grounded)
@@ -51,5 +60,11 @@ public class BodyController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         jumped = context.action.triggered;
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight; 
+        transform.Rotate(0, 180, 0);
     }
 }

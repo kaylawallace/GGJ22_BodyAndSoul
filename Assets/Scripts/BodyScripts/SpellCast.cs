@@ -9,18 +9,15 @@ public class SpellCast : MonoBehaviour
     public Transform firePoint;
     public GameObject orbPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool cooling; 
 
     // Update is called once per frame
     void Update()
     {
-        if (cast)
+        if (cast && !cooling)
         {
             Cast();
+            StartCoroutine(Cooldown(1));
         }
     }
 
@@ -31,7 +28,14 @@ public class SpellCast : MonoBehaviour
 
     public void Cast()
     {       
-        Instantiate(orbPrefab, firePoint.position, Quaternion.identity);
+        Instantiate(orbPrefab, firePoint.position, firePoint.rotation);
         cast = false;
+    }
+
+    IEnumerator Cooldown(float cooldownTime)
+    {
+        cooling = true;
+        yield return new WaitForSeconds(cooldownTime);
+        cooling = false;
     }
 }

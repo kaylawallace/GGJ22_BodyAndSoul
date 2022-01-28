@@ -9,18 +9,21 @@ TagManager:
   - Soul
   - Rope
   - Platform
+  - Orb
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Orb
   - Water
   - UI
   - LineRenderer
-  - 
-  - 
-  - 
-  - 
+  - Players
+  - Enemy
+  - Environment
+  - Platform
   - 
   - 
   - 
