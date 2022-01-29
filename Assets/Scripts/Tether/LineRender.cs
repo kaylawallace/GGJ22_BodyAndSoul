@@ -27,10 +27,10 @@ public class LineRender : MonoBehaviour
         {
             line = gameObject.GetComponent<LineRenderer>();
             line.widthMultiplier = .1f;
-            line.positionCount = len;
+            line.positionCount = 2;
         }
 
-        float alpha = .5f;
+        float alpha = 1f;
         Gradient gradient = new Gradient();
         gradient.SetKeys(
             new GradientColorKey[] { new GradientColorKey(c1, 0f), new GradientColorKey(c2, 1f)},
@@ -56,9 +56,9 @@ public class LineRender : MonoBehaviour
             soulPos = GameObject.FindGameObjectWithTag("Soul").transform;
         }
 
-        var points = new Vector3[len];
+        var points = new Vector3[2];
         points[0] = new Vector3(bodyPos.position.x, bodyPos.position.y, bodyPos.position.z);
-        points[len-1] = new Vector3(soulPos.position.x, soulPos.position.y, soulPos.position.z);
+        points[1] = new Vector3(soulPos.position.x, soulPos.position.y, soulPos.position.z);
 
         line.SetPositions(points);
     }

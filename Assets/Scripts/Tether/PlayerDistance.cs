@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDistance : MonoBehaviour
 {
-    float maxDist = 20f;
+    float maxDist = 10f;
     float dist = 0f;
     GameObject body, soul;
     Vector3 bPos, sPos;

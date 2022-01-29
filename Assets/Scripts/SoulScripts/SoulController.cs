@@ -103,6 +103,19 @@ public class SoulController : MonoBehaviour
             {
                 rb.constraints |= RigidbodyConstraints.FreezePositionX;
             }
+            else if (p.usesGravity)
+            {
+                Rigidbody temp = p.gameObject.GetComponent<Rigidbody>();
+                if (temp)
+                {
+                    Destroy(p.gameObject.GetComponent<Rigidbody>());
+                }
+            }
+
+            if (p.controlsAnother)
+            {
+                p.anotherToControl.transform.parent = transform;
+            }
 
             possessing = true;
         }
@@ -110,20 +123,32 @@ public class SoulController : MonoBehaviour
 
     public void Unpossess()
     {
-        if (possessing && p)
+        if (possessing)
         {
             toPossess.parent = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            
-            if (p.limitToX)
+
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+
+            if (p)
             {
-                rb.constraints = RigidbodyConstraints.None;                
-                rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
-            }
-            else if (p.limitToY)
-            {
-                rb.constraints = RigidbodyConstraints.None;
-                rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+                if (p.usesGravity)
+                {
+                    p.gameObject.AddComponent<Rigidbody>();
+                    p.gameObject.GetComponent<Rigidbody>().useGravity = true;
+                }
+                if (p.controlsAnother)
+                {
+                    p.anotherToControl.transform.parent = null;
+
+                    Platform temp = gameObject.GetComponentInChildren<Platform>();
+                    if (temp)
+                    {
+                        gameObject.GetComponentInChildren<Platform>().transform.parent = null;
+                        Destroy(temp);
+                    }
+                }
             }
 
             possessing = false;
