@@ -28,9 +28,8 @@ public class PlayerDistance : MonoBehaviour
         dist = Vector3.Distance(bPos, sPos);
         if (dist >= maxDist)
         {
-            body.SetActive(false);
-            soul.SetActive(false);
             dist = 0;
+            body.GetComponent<RespawnPlayers>().TakeDamage(1);
         }
         else if (dist > (maxDist / 2) && dist < maxDist)
         {

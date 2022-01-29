@@ -7,7 +7,6 @@ public class RespawnPlayers : MonoBehaviour
     public Transform spawnPoint; 
     public int maxHealth = 1;
     [SerializeField]private int health;
-    private bool cooling;
     private GameObject other;
     private Vector3 soulSpawnPosOffset = new Vector3(-2f, 1.5f, 0f);
 
@@ -56,7 +55,6 @@ public class RespawnPlayers : MonoBehaviour
         }
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         other.GetComponent<MeshRenderer>().enabled = false;
-        //StartCoroutine(RespawnTime(2f));
     }
 
     public void Respawn()
@@ -103,9 +101,7 @@ public class RespawnPlayers : MonoBehaviour
 
     IEnumerator RespawnTime(float respawnTime)
     {
-        cooling = true;
         yield return new WaitForSeconds(respawnTime);
-        cooling = false;
         Respawn();
     }
 }

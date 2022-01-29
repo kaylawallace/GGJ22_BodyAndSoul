@@ -32,7 +32,12 @@ public class Orb : MonoBehaviour
         if (enemy)
         {
             enemy.TakeDamage(1);
+        }       
+        else if (other.CompareTag("Destructable"))
+        {
+            Destroy(other.gameObject);
         }
+
         GameObject hit = Instantiate(hitEffect, gameObject.transform.position, gameObject.transform.rotation);
         Destroy(gameObject);
         Destroy(hit, 1f);

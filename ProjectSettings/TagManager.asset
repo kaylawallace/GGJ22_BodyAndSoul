@@ -12,6 +12,9 @@ TagManager:
   - Orb
   - Enemy
   - Ground
+  - Hazard
+  - Phasable
+  - Destructable
   layers:
   - Default
   - TransparentFX
@@ -27,8 +30,8 @@ TagManager:
   - PlatformOrbCollide
   - Body
   - Soul
-  - 
-  - 
+  - PassableByBody
+  - PassableBySoul
   - 
   - 
   - 
