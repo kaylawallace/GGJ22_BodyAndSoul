@@ -80,10 +80,108 @@
 										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
+								<RandomSequenceContainer Name="Magic Sounds" ID="{A9669A38-3AF9-4ABC-8846-D55B6658CB34}" ShortID="1002060877">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Death Sounds" ID="{7F5F9263-E2CB-4EA6-964E-D3E4C10074D6}" ShortID="411316887">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Soul" ID="{E6EE6E52-7B9B-4A08-BDED-4FF87953F699}" ShortID="177663193"/>
-						<Folder Name="Enemies" ID="{ACFB5421-EFE8-4A33-9581-132D8F3BEB81}" ShortID="54151163"/>
+						<Folder Name="Soul" ID="{E6EE6E52-7B9B-4A08-BDED-4FF87953F699}" ShortID="177663193">
+							<ChildrenList>
+								<Sound Name="Phase" ID="{D3A00FFD-BDB4-429A-B0DE-C73EECE6FC51}" ShortID="204483706">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+								<Sound Name="Possessing" ID="{E27B136D-405A-4735-A154-E507FF729C3E}" ShortID="370746606">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+								<RandomSequenceContainer Name="Death Sounds" ID="{0D8741A9-05E2-4768-9751-CA582F25B25C}" ShortID="1000664579">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Enemies" ID="{ACFB5421-EFE8-4A33-9581-132D8F3BEB81}" ShortID="54151163">
+							<ChildrenList>
+								<Sound Name="Enemy Damage" ID="{1AA8596D-BDA9-4D74-BDEE-8D2F0819D5DA}" ShortID="614747034">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+								<Sound Name="Enemy Death" ID="{2E4679E8-A622-4A19-BE2D-25DB0773E253}" ShortID="581664327">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Extra" ID="{4BCE6EFC-4007-4E96-AE55-2246CA57E1BE}" ShortID="446383272">
+							<ChildrenList>
+								<Sound Name="Cave Door" ID="{3DB07D75-7C37-4962-8FF7-094F21F0E860}" ShortID="455021828">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -97,7 +195,32 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Folder Name="Cave" ID="{0677AC73-3723-40B5-8592-0224088D6686}" ShortID="417518871"/>
+						<Folder Name="Cave" ID="{0677AC73-3723-40B5-8592-0224088D6686}" ShortID="417518871">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Water Drip" ID="{ECC8C213-24DF-4AA1-A601-0BC248A003A5}" ShortID="603703351">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<Sound Name="Cave Noise" ID="{8CFA6A0B-9C35-4B2E-BB56-9697D746278E}" ShortID="570228743">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="Forest" ID="{A2BA2F72-60D2-49D5-A8B0-13363423CD2D}" ShortID="745410401"/>
 					</ChildrenList>
 					<ObjectLists/>
