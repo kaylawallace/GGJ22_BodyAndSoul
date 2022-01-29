@@ -15,22 +15,102 @@
 					<ChildrenList>
 						<Folder Name="Body" ID="{1F76C3B2-4409-4719-ACF6-A3A4D37FBAFA}" ShortID="565679160">
 							<ChildrenList>
-								<SwitchContainer Name="Footsteps" ID="{1F9A89E1-042E-4ADE-9CDC-9E062F31068D}" ShortID="272686516">
+								<SwitchContainer Name="Footsteps" ID="{CF0569A4-F3DF-4E1A-A87C-38AB617FCB59}" ShortID="987392730">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
 										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Forest" ID="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}" WorkUnitID="{AB61FFBF-80BC-400C-A31A-D54C7BC311CD}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
 										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="footsteps" ID="{72749E63-BD61-4708-A36F-0E957A3D4B95}" WorkUnitID="{AB61FFBF-80BC-400C-A31A-D54C7BC311CD}"/>
+										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="forestSteps" ID="{D020F32E-04E0-4BFF-A722-E0094E226B42}" ShortID="948172378">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+												</Reference>
+											</ReferenceList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="caveSteps" ID="{76D01968-ADD7-4155-AE52-D400839C47B1}" ShortID="212365410">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+												</Reference>
+											</ReferenceList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
 									<ObjectLists/>
-									<GroupingInfo/>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="forestSteps" ID="{D020F32E-04E0-4BFF-A722-E0094E226B42}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="caveSteps" ID="{76D01968-ADD7-4155-AE52-D400839C47B1}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Cave" ID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}"/>
+												<ItemList>
+													<ItemRef Name="caveSteps" ID="{76D01968-ADD7-4155-AE52-D400839C47B1}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Forest" ID="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}"/>
+												<ItemList>
+													<ItemRef Name="forestSteps" ID="{D020F32E-04E0-4BFF-A722-E0094E226B42}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
 								</SwitchContainer>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Soul" ID="{E6EE6E52-7B9B-4A08-BDED-4FF87953F699}" ShortID="177663193"/>
+						<Folder Name="Enemies" ID="{ACFB5421-EFE8-4A33-9581-132D8F3BEB81}" ShortID="54151163"/>
 					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="Ambience" ID="{6CF023B7-C606-4A91-8E77-4205217AB5BD}" ShortID="179346442">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Cave" ID="{0677AC73-3723-40B5-8592-0224088D6686}" ShortID="417518871"/>
+						<Folder Name="Forest" ID="{A2BA2F72-60D2-49D5-A8B0-13363423CD2D}" ShortID="745410401"/>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="Dialogue" ID="{60B9AFB5-75ED-4A0A-91AF-104708260180}" ShortID="155045134">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+						</Reference>
+					</ReferenceList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>
