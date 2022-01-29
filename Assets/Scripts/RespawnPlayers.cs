@@ -9,7 +9,7 @@ public class RespawnPlayers : MonoBehaviour
     [SerializeField]private int health;
     private bool cooling;
     private GameObject other;
-    private Vector3 soulSpawnPosOffset = new Vector3(-1, 1, 0);
+    private Vector3 soulSpawnPosOffset = new Vector3(-2f, 1.5f, 0f);
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +31,10 @@ public class RespawnPlayers : MonoBehaviour
         if (health <= 0)
         {
             Death();
-
+            StartCoroutine(RespawnTime(2f));
             //if (!cooling)
             //{
-                Respawn();
+                //Respawn();
             //}
         }
     }
@@ -106,5 +106,6 @@ public class RespawnPlayers : MonoBehaviour
         cooling = true;
         yield return new WaitForSeconds(respawnTime);
         cooling = false;
+        Respawn();
     }
 }

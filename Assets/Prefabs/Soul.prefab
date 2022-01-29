@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4377350735685607586}
   - component: {fileID: 4743809590407401161}
   - component: {fileID: 675930682770801185}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8031916340677067114}
   - component: {fileID: 3045948501246607869}
   - component: {fileID: 5385442148675684449}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Soul
   m_TagString: Soul
   m_Icon: {fileID: 0}
@@ -337,3 +337,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1160839690216438926, guid: 549de883b88305a44b03cd2cc08387e4, type: 3}
   maxHealth: 1
+  health: 0

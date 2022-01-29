@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2645835966857771049}
   - component: {fileID: 5617871899173614647}
   - component: {fileID: 4493191682459910085}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Body
   m_TagString: Body
   m_Icon: {fileID: 0}
@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8083504093558318032}
-  orbPrefab: {fileID: 6209882748512168713, guid: 649b91b387f78524f85cd93281050abf, type: 3}
-  muzzleEffect: {fileID: 1944118941562101453, guid: 075a8cf6724c89043a00401f7a2d47f9, type: 3}
+  orbPrefab: {fileID: 8582799309118657007, guid: fee02c7ec77b8cb469a7e1a86fda67bc, type: 3}
+  muzzleEffect: {fileID: 3318237474668138539, guid: 15f97a4b2f4caae44a7f0b29c3c4e1d8, type: 3}
 --- !u!114 &4493191682459910085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 8331014721427909622}
   - component: {fileID: 5231058563878539974}
   - component: {fileID: 8471449376474642956}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8083504093558318032}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -399,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026285582343699195}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.603, y: -0.01, z: 0.012}
+  m_LocalPosition: {x: 0.603, y: 0.269, z: 0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
