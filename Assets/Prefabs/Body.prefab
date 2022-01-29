@@ -262,7 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8083504093558318032}
   orbPrefab: {fileID: 8582799309118657007, guid: fee02c7ec77b8cb469a7e1a86fda67bc, type: 3}
-  muzzleEffect: {fileID: 3318237474668138539, guid: 15f97a4b2f4caae44a7f0b29c3c4e1d8, type: 3}
+  muzzleEffect: {fileID: 3318237474668138539, guid: 75e1303a6db7830439927aefd93c2957, type: 3}
 --- !u!114 &4493191682459910085
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -33,8 +33,8 @@ public class LineRender : MonoBehaviour
         float alpha = 1f;
         Gradient gradient = new Gradient();
         gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(c1, 0f), new GradientColorKey(c2, 1f)},
-            new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0f), new GradientAlphaKey(alpha, 1f)}
+            new GradientColorKey[] { new GradientColorKey(c1, 0f), new GradientColorKey(c2, 1f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0f), new GradientAlphaKey(alpha, 1f) }
             );
         line.colorGradient = gradient;
     }

@@ -18,8 +18,7 @@ public class RespawnPlayers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy")) {
-            //print("collision");
+        if (other.CompareTag("Enemy") || other.CompareTag("Hazard")) {
             TakeDamage(1);
         }
     }
@@ -31,10 +30,6 @@ public class RespawnPlayers : MonoBehaviour
         {
             Death();
             StartCoroutine(RespawnTime(2f));
-            //if (!cooling)
-            //{
-                //Respawn();
-            //}
         }
     }
 
@@ -94,8 +89,8 @@ public class RespawnPlayers : MonoBehaviour
 
             other.GetComponent<CharacterController>().enabled = true;
 
-            other.GetComponent<SoulController>().enabled = true;
-            gameObject.GetComponent<BodyController>().enabled = true;
+            other.GetComponent<BodyController>().enabled = true;
+            gameObject.GetComponent<SoulController>().enabled = true;
         }
     }
 
