@@ -31,13 +31,64 @@
 				</Folder>
 				<Folder Name="Body" ID="{D29A5764-4BA2-4C66-913B-64EA88BAA845}" ShortID="65869113">
 					<ChildrenList>
-						<Folder Name="Spell" ID="{908CBD89-B7C1-45C0-AAC1-508E532B5BFC}" ShortID="645769760"/>
-						<Folder Name="Footsteps" ID="{D0CC802C-F260-4B57-99DA-244E27CB0DD4}" ShortID="913599856"/>
+						<Event Name="steps" ID="{8851E80F-C286-49CA-B29E-D9DF53EE7B55}">
+							<ChildrenList>
+								<Action Name="" ID="{123B2378-E62B-4443-B086-DC99B6BE9153}" ShortID="543262794">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{CF0569A4-F3DF-4E1A-A87C-38AB617FCB59}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Death" ID="{8384BF96-7395-4E6C-8D76-7CDC086A561C}"/>
+						<Event Name="Magic" ID="{88B08ADF-F89E-4E78-9885-6E45CA7159B0}">
+							<ChildrenList>
+								<Action Name="" ID="{F066BBB4-DD9A-4375-A153-564970DC03BF}" ShortID="280764761">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Magic Sound" ID="{A0D7E5C3-84CC-4E86-9601-1082AF4CBDDE}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Soul" ID="{ADB3A231-A542-47A9-B7FD-D99648FBB4BF}" ShortID="545307451"/>
-				<Folder Name="Ambience" ID="{082EED78-8013-409E-A3F2-8E6F8EE25E81}" ShortID="156918517"/>
+				<Folder Name="Ambience" ID="{082EED78-8013-409E-A3F2-8E6F8EE25E81}" ShortID="156918517">
+					<ChildrenList>
+						<Folder Name="Forest" ID="{752EAA06-C4AD-441C-A470-709A585426FC}" ShortID="578803692">
+							<ChildrenList>
+								<Event Name="Wind" ID="{1516C232-DC64-4B88-8979-F9981548E648}">
+									<ChildrenList>
+										<Action Name="" ID="{D839343D-3253-4002-890E-DCED5D91F018}" ShortID="22689560">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AmbientWind" ID="{D5DAAF13-561F-4593-BA53-5F253B427471}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Bird" ID="{B2A4BAAC-A897-4F3D-BEFF-468B45F3F7FA}">
+									<ChildrenList>
+										<Action Name="" ID="{D6B50813-3F20-440D-8540-A69330245642}" ShortID="1014236966">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Birds In Forest" ID="{8ABBD26C-377D-4385-86D4-574C1404DD31}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="Enemy" ID="{46F78F34-7C76-4F1E-993B-914E2DF2666B}" ShortID="1002868328"/>
+				<Folder Name="Dialogue" ID="{8B039518-ADFA-4C22-8ECA-EBBC505D7F11}" ShortID="727285556"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

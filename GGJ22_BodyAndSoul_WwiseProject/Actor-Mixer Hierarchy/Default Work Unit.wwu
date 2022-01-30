@@ -461,29 +461,6 @@
 										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
-								<Sound Name="Death_Body" ID="{CA5214E7-94A5-4AD2-892F-C8A941FEDF21}" ShortID="978433415">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Death_Body" ID="{66D8F5A8-F626-474D-A9DD-A2F72FD7890D}">
-											<Language>SFX</Language>
-											<AudioFile>Death_Body.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1014750393"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Death_Body" ID="{66D8F5A8-F626-474D-A9DD-A2F72FD7890D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Magic Sound" ID="{A0D7E5C3-84CC-4E86-9601-1082AF4CBDDE}" ShortID="960899841">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -505,6 +482,29 @@
 									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Spell_Cast" ID="{550CE0DC-0D2E-4B73-B036-C924691B3F68}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Death_Body" ID="{CA5214E7-94A5-4AD2-892F-C8A941FEDF21}" ShortID="978433415">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Death_Body" ID="{66D8F5A8-F626-474D-A9DD-A2F72FD7890D}">
+											<Language>SFX</Language>
+											<AudioFile>Death_Body.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1014750393"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Death_Body" ID="{66D8F5A8-F626-474D-A9DD-A2F72FD7890D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -712,6 +712,9 @@
 						<Folder Name="Forest" ID="{A2BA2F72-60D2-49D5-A8B0-13363423CD2D}" ShortID="745410401">
 							<ChildrenList>
 								<Sound Name="AmbientWind" ID="{D5DAAF13-561F-4593-BA53-5F253B427471}" ShortID="512933618">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -735,6 +738,9 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Birds In Forest" ID="{8ABBD26C-377D-4385-86D4-574C1404DD31}" ShortID="692561396">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>

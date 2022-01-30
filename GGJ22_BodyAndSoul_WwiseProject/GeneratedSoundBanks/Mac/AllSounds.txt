@@ -1,0 +1,53 @@
+Event	ID	Name			Wwise Object Path	Notes
+	207755397	Play_Forest			\Default Work Unit\Music\Play_Forest	
+	779278001	Death			\Default Work Unit\Body\Death	
+	1537061107	Wind			\Default Work Unit\Ambience\Forest\Wind	
+	1544377644	Bird			\Default Work Unit\Ambience\Forest\Bird	
+	1718617278	steps			\Default Work Unit\Body\steps	
+	1880439950	Magic			\Default Work Unit\Body\Magic	
+	3602995889	Play_Cave			\Default Work Unit\Music\Play_Cave	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	footsteps			\Default Work Unit\footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	491961918	Forest	footsteps			
+	4122393694	Cave	footsteps			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	1176052424	Location			\Default Work Unit\Location	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Location			
+
+Effect plug-ins	ID	Name	Type				Notes
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
+	1203617187	Machine_Gun_Hangar	Wwise RoomVerb			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	22772108	Cave_Step_5	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_5		61516
+	42081584	AmbientWind	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\AmbientWind_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Forest\AmbientWind		4829564
+	75699893	Forest_Strings_Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Strings_Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Forest\Forest\Forest_Strings_Master		15380020
+	255558496	Forest_Percussion_Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Percussion_Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Forest\Forest\Forest_Percussion_Master		15380020
+	285452383	Caves_1_Marimba Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Caves_1_Marimba Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Caves\Cave\Caves_1_Marimba Master		12375284
+	290193867	Forest_Step_4	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_4		37116
+	318481171	Cave_Step_9	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_9		71252
+	424072129	Forest_Step_7	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_7		53888
+	428815167	Cave_Step_7	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_7		56740
+	524868717	Forest_Step_5	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_5		17324
+	549460824	Cave_Step_4	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_4		57476
+	573091777	Caves_1_Strings Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Caves_1_Strings Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Caves\Cave\Caves_1_Strings Master		12375284
+	584931505	Forest_Step_1	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_1		251116
+	621356996	Caves_1_Piano Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Caves_1_Piano Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Caves\Cave\Caves_1_Piano Master		12375284
+	651640219	Cave_Step_6	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_6		55264
+	698997697	Cave_Step_1	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_1		30736
+	795309854	Forest_Step_3	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_3		49232
+	854884380	Cave_Step_3	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_3		53984
+	866839701	Forest_Step_6	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_6		34504
+	867368377	Forest_Step_2	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Step_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\forestSteps\Forest_Step_2		63840
+	917367847	Magic Sound	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Spell_Cast_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Magic Sound		352944
+	919502635	Forest_Piano_Master	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Forest_Piano_Master_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Body and Soul\Forest\Forest\Forest_Piano_Master		15380020
+	979774607	Cave_Step_8	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_8		56924
+	981888677	Birds In Forest	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Birds In Forest_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Forest\Birds In Forest		19936940
+	995300493	Cave_Step_2	C:\Users\Ciaran\Documents\Gamejam Oct 2021\GGJ22_BodyAndSoul\GGJ22_BodyAndSoul_WwiseProject\.cache\Mac\SFX\Cave_Step_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Body\Footsteps\caveSteps\Cave_Step_2		56188
+
