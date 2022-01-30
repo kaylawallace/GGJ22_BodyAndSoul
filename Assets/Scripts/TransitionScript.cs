@@ -10,7 +10,9 @@ public class TransitionScript : MonoBehaviour
     [SerializeField] float transitionTime;
     [SerializeField] float transitionSpeed;
     float transitionTimer;
-    // Start is called before the first frame update
+    public bool activateTransition;
+
+    
     void Start()
     {
         Transition.SetActive(false);
@@ -19,14 +21,30 @@ public class TransitionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transitionTimer += Time.deltaTime;
-        if(transitionTimer < transitionTime)
+        if(activateTransition)
         {
-            Transition.transform.localScale += Transition.transform.localScale *  (transitionSpeed * Time.deltaTime);
+
+            transitionTimer += Time.deltaTime;
+            if(transitionTimer < transitionTime)
+            {
+                Transition.GetComponent<RectTransform>().sizeDelta += Transition.GetComponent<RectTransform>().sizeDelta * (transitionSpeed * Time.deltaTime) ;
+            }
+            else
+            {
+                Transition.GetComponent<RectTransform>().sizeDelta -= Transition.GetComponent<RectTransform>().sizeDelta * (transitionSpeed * Time.deltaTime);
+            }
+
+            if (transitionTimer > transitionTime)
+            {
+                //Switch Scene;
+            }
         }
-        else
-        {
-            Transition.transform.localScale -= Transition.transform.localScale * (transitionSpeed * Time.deltaTime);
-        }
+
+    }
+
+    public void EnableTransition()
+    {
+        activateTransition = true;
     }
 }
+
