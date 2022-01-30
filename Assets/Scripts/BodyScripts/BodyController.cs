@@ -49,7 +49,9 @@ public class BodyController : MonoBehaviour
         }
 
         vel.y += gravity * Time.deltaTime;
-        controller.Move(vel * Time.deltaTime);       
+        controller.Move(vel * Time.deltaTime);  
+        
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
