@@ -10,6 +10,7 @@ public class SpellCast : MonoBehaviour
     public GameObject orbPrefab;
     public GameObject muzzleEffect;
 
+    //[SerializeField] private Animator animController;
     private bool cooling; 
 
     // Update is called once per frame
@@ -29,6 +30,9 @@ public class SpellCast : MonoBehaviour
 
     public void Cast()
     {
+        //animController.SetInteger("AnimState", 4);
+        Animator anim = gameObject.GetComponent<BodyController>().animController;
+        anim.SetTrigger("SpellCast");
         GameObject muzzle = Instantiate(muzzleEffect, firePoint.position, firePoint.rotation);
         Instantiate(orbPrefab, firePoint.position, firePoint.rotation);
         Destroy(muzzle, 1f);
