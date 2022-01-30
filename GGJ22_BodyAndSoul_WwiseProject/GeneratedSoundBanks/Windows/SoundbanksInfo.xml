@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3278463154" Language="SFX" Hash="328092358">
+		<SoundBank Id="3278463154" Language="SFX" Hash="4229790628">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllSounds</ObjectPath>
 			<ShortName>AllSounds</ShortName>
 			<Path>AllSounds.bnk</Path>
