@@ -45,12 +45,6 @@ public class SoulController : MonoBehaviour
         {
             Unpossess();
         }
-
-        if (dashed && !cooling)
-        {
-            Dash();
-            StartCoroutine(Cooldown(2f));
-        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -141,7 +135,6 @@ public class SoulController : MonoBehaviour
             {
                 print(temp.gameObject.name);
                 temp.gameObject.transform.parent = null;
-                //Destroy(temp);
             }
 
             if (p)
@@ -165,20 +158,6 @@ public class SoulController : MonoBehaviour
             }
 
             possessing = false;
-        }
-    }
-
-    public void Dash()
-    {
-        if (dashTime <= 0)
-        {
-            dashTime = startDashTime;
-            rb.velocity = Vector3.zero;
-        }
-        else
-        {
-            dashTime -= Time.deltaTime;
-            rb.velocity = new Vector3(movInput.x, movInput.y, 0) * dashSpeed;
         }
     }
 
