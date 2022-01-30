@@ -10,6 +10,7 @@ public class SoulController : MonoBehaviour
     public float dashSpeed;
     public float startDashTime;
     public float dashCooldown;
+    public SkinnedMeshRenderer[] renderers = new SkinnedMeshRenderer[5];
 
     private Rigidbody rb;
     private Vector2 movInput = Vector2.zero;
@@ -21,7 +22,6 @@ public class SoulController : MonoBehaviour
     private bool unpossessed;
     private bool possessing;
     private bool inRange;
-    private bool dashed;
     private bool cooling;
     private bool facingRight = true;
 
@@ -62,11 +62,6 @@ public class SoulController : MonoBehaviour
         unpossessed = context.action.triggered;
     }
 
-    public void OnDash(InputAction.CallbackContext context)
-    {
-        dashed = context.action.triggered;
-    }
-
     public void Move()
     {
         Vector3 move = new Vector3(movInput.x, movInput.y, 0);
@@ -87,7 +82,13 @@ public class SoulController : MonoBehaviour
         if (inRange && p)
         {
             toPossess.parent = transform;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;             
+            //gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+            for (int i = 0; i < renderers.Length; i++)
+            {
+                renderers[i].enabled = false; 
+            }
+            
 
             if (p.limitToX)
             {
@@ -124,8 +125,12 @@ public class SoulController : MonoBehaviour
             {
                 toPossess.parent = null;
             }
-            
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
+
+            //gameObject.GetComponent<MeshRenderer>().enabled = true;
+            for (int i = 0; i < renderers.Length; i++)
+            {
+                renderers[i].enabled = true;
+            }
 
             rb.constraints = RigidbodyConstraints.None;
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;

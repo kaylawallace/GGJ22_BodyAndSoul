@@ -26,7 +26,7 @@ public class LineRender : MonoBehaviour
         if (!line)
         {
             line = gameObject.GetComponent<LineRenderer>();
-            line.widthMultiplier = .1f;
+            line.widthMultiplier = .6f;
             line.positionCount = 2;
         }
 
