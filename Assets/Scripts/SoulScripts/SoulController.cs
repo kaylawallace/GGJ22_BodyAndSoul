@@ -103,7 +103,8 @@ public class SoulController : MonoBehaviour
             {
                 rb.constraints |= RigidbodyConstraints.FreezePositionX;
             }
-            else if (p.usesGravity)
+            
+            if (p.usesGravity)
             {
                 Rigidbody temp = p.gameObject.GetComponent<Rigidbody>();
                 if (temp)
@@ -125,11 +126,23 @@ public class SoulController : MonoBehaviour
     {
         if (possessing)
         {
-            toPossess.parent = null;
+            if (toPossess)
+            {
+                toPossess.parent = null;
+            }
+            
             gameObject.GetComponent<MeshRenderer>().enabled = true;
 
             rb.constraints = RigidbodyConstraints.None;
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+
+            Platform temp = gameObject.GetComponentInChildren<Platform>();
+            if (temp)
+            {
+                print(temp.gameObject.name);
+                temp.gameObject.transform.parent = null;
+                //Destroy(temp);
+            }
 
             if (p)
             {
@@ -141,8 +154,8 @@ public class SoulController : MonoBehaviour
                 if (p.controlsAnother)
                 {
                     p.anotherToControl.transform.parent = null;
-
-                    Platform temp = gameObject.GetComponentInChildren<Platform>();
+                    
+                    temp = gameObject.GetComponentInChildren<Platform>();
                     if (temp)
                     {
                         gameObject.GetComponentInChildren<Platform>().transform.parent = null;
