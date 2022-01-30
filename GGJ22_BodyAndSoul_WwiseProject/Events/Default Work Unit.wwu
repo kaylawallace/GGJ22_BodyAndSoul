@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9BCA8603-4054-4E38-BD2A-33F697CFC783}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{9BCA8603-4054-4E38-BD2A-33F697CFC783}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{9BCA8603-4054-4E38-BD2A-33F697CFC783}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{FA80FC59-A6A2-4A87-8039-A502D48FDEF3}" ShortID="1034000632">
+					<ChildrenList>
+						<Event Name="Play_Forest" ID="{13EC6EEE-1ED4-4663-A388-16EC88C6A157}">
+							<ChildrenList>
+								<Action Name="" ID="{76477B57-DA58-4901-BF81-4B5D6EF002F6}" ShortID="933835722">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Forest" ID="{5A0F59BE-CE58-4B21-9A0E-DEF259EFDB14}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Cave" ID="{485DE27D-6891-44D4-9724-90E5AA6119FD}">
+							<ChildrenList>
+								<Action Name="" ID="{9D95C8BD-E7C6-46CB-8686-D625CE9246C2}" ShortID="730218696">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cave" ID="{5AD73C77-7136-43AE-991B-C7AA00DB4A95}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Body" ID="{D29A5764-4BA2-4C66-913B-64EA88BAA845}" ShortID="65869113">
+					<ChildrenList>
+						<Event Name="steps" ID="{8851E80F-C286-49CA-B29E-D9DF53EE7B55}">
+							<ChildrenList>
+								<Action Name="" ID="{123B2378-E62B-4443-B086-DC99B6BE9153}" ShortID="543262794">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footsteps" ID="{CF0569A4-F3DF-4E1A-A87C-38AB617FCB59}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Death" ID="{8384BF96-7395-4E6C-8D76-7CDC086A561C}"/>
+						<Event Name="Magic" ID="{88B08ADF-F89E-4E78-9885-6E45CA7159B0}">
+							<ChildrenList>
+								<Action Name="" ID="{F066BBB4-DD9A-4375-A153-564970DC03BF}" ShortID="280764761">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Magic Sound" ID="{A0D7E5C3-84CC-4E86-9601-1082AF4CBDDE}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Soul" ID="{ADB3A231-A542-47A9-B7FD-D99648FBB4BF}" ShortID="545307451"/>
+				<Folder Name="Ambience" ID="{082EED78-8013-409E-A3F2-8E6F8EE25E81}" ShortID="156918517">
+					<ChildrenList>
+						<Folder Name="Forest" ID="{752EAA06-C4AD-441C-A470-709A585426FC}" ShortID="578803692">
+							<ChildrenList>
+								<Event Name="Wind" ID="{1516C232-DC64-4B88-8979-F9981548E648}">
+									<ChildrenList>
+										<Action Name="" ID="{D839343D-3253-4002-890E-DCED5D91F018}" ShortID="22689560">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="AmbientWind" ID="{D5DAAF13-561F-4593-BA53-5F253B427471}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Bird" ID="{B2A4BAAC-A897-4F3D-BEFF-468B45F3F7FA}">
+									<ChildrenList>
+										<Action Name="" ID="{D6B50813-3F20-440D-8540-A69330245642}" ShortID="1014236966">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Birds In Forest" ID="{8ABBD26C-377D-4385-86D4-574C1404DD31}" WorkUnitID="{1D716262-549C-4C3E-8821-368F08654403}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{46F78F34-7C76-4F1E-993B-914E2DF2666B}" ShortID="1002868328"/>
+				<Folder Name="Dialogue" ID="{8B039518-ADFA-4C22-8ECA-EBBC505D7F11}" ShortID="727285556"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

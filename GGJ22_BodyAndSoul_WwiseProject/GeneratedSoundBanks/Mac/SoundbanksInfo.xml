@@ -11,15 +11,177 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3139452581">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3278463154" Language="SFX" Hash="1846871721">
+		<SoundBank Id="3278463154" Language="SFX" Hash="328092358">
 			<ObjectPath>\SoundBanks\Default Work Unit\AllSounds</ObjectPath>
 			<ShortName>AllSounds</ShortName>
 			<Path>AllSounds.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1544377644" Name="Bird" ObjectPath="\Events\Default Work Unit\Ambience\Forest\Bird" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="981888677" Language="SFX">
+							<ShortName>Birds In Forest.wav</ShortName>
+							<Path>SFX\Birds In Forest_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="779278001" Name="Death" ObjectPath="\Events\Default Work Unit\Body\Death" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1880439950" Name="Magic" ObjectPath="\Events\Default Work Unit\Body\Magic" DurationType="OneShot" DurationMin="2.000000" DurationMax="2.000000">
+					<IncludedMemoryFiles>
+						<File Id="917367847" Language="SFX">
+							<ShortName>Spell_Cast.wav</ShortName>
+							<Path>SFX\Spell_Cast_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3602995889" Name="Play_Cave" ObjectPath="\Events\Default Work Unit\Music\Play_Cave" DurationType="OneShot" DurationMin="70.153854" DurationMax="70.153854">
+					<IncludedMemoryFiles>
+						<File Id="285452383" Language="SFX">
+							<ShortName>Caves_1_Marimba Master.wav</ShortName>
+							<Path>SFX\Caves_1_Marimba Master_D79FB2B7.wem</Path>
+						</File>
+						<File Id="573091777" Language="SFX">
+							<ShortName>Caves_1_Strings Master.wav</ShortName>
+							<Path>SFX\Caves_1_Strings Master_D79FB2B7.wem</Path>
+						</File>
+						<File Id="621356996" Language="SFX">
+							<ShortName>Caves_1_Piano Master.wav</ShortName>
+							<Path>SFX\Caves_1_Piano Master_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="207755397" Name="Play_Forest" ObjectPath="\Events\Default Work Unit\Music\Play_Forest" DurationType="OneShot" DurationMin="87.187508" DurationMax="87.187508">
+					<IncludedMemoryFiles>
+						<File Id="75699893" Language="SFX">
+							<ShortName>Forest_Strings_Master.wav</ShortName>
+							<Path>SFX\Forest_Strings_Master_D79FB2B7.wem</Path>
+						</File>
+						<File Id="255558496" Language="SFX">
+							<ShortName>Forest_Percussion_Master.wav</ShortName>
+							<Path>SFX\Forest_Percussion_Master_D79FB2B7.wem</Path>
+						</File>
+						<File Id="919502635" Language="SFX">
+							<ShortName>Forest_Piano_Master.wav</ShortName>
+							<Path>SFX\Forest_Piano_Master_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1718617278" Name="steps" ObjectPath="\Events\Default Work Unit\Body\steps" DurationType="OneShot" DurationMin="0.097392" DurationMax="1.422744">
+					<IncludedMemoryFiles>
+						<File Id="22772108" Language="SFX">
+							<ShortName>Cave_Step_5.wav</ShortName>
+							<Path>SFX\Cave_Step_5_10C4C929.wem</Path>
+						</File>
+						<File Id="290193867" Language="SFX">
+							<ShortName>Forest_Step_4.wav</ShortName>
+							<Path>SFX\Forest_Step_4_10C4C929.wem</Path>
+						</File>
+						<File Id="318481171" Language="SFX">
+							<ShortName>Cave_Step_9.wav</ShortName>
+							<Path>SFX\Cave_Step_9_10C4C929.wem</Path>
+						</File>
+						<File Id="424072129" Language="SFX">
+							<ShortName>Forest_Step_7.wav</ShortName>
+							<Path>SFX\Forest_Step_7_10C4C929.wem</Path>
+						</File>
+						<File Id="428815167" Language="SFX">
+							<ShortName>Cave_Step_7.wav</ShortName>
+							<Path>SFX\Cave_Step_7_10C4C929.wem</Path>
+						</File>
+						<File Id="524868717" Language="SFX">
+							<ShortName>Forest_Step_5.wav</ShortName>
+							<Path>SFX\Forest_Step_5_10C4C929.wem</Path>
+						</File>
+						<File Id="549460824" Language="SFX">
+							<ShortName>Cave_Step_4.wav</ShortName>
+							<Path>SFX\Cave_Step_4_10C4C929.wem</Path>
+						</File>
+						<File Id="584931505" Language="SFX">
+							<ShortName>Forest_Step_1.wav</ShortName>
+							<Path>SFX\Forest_Step_1_10C4C929.wem</Path>
+						</File>
+						<File Id="651640219" Language="SFX">
+							<ShortName>Cave_Step_6.wav</ShortName>
+							<Path>SFX\Cave_Step_6_10C4C929.wem</Path>
+						</File>
+						<File Id="698997697" Language="SFX">
+							<ShortName>Cave_Step_1.wav</ShortName>
+							<Path>SFX\Cave_Step_1_10C4C929.wem</Path>
+						</File>
+						<File Id="795309854" Language="SFX">
+							<ShortName>Forest_Step_3.wav</ShortName>
+							<Path>SFX\Forest_Step_3_10C4C929.wem</Path>
+						</File>
+						<File Id="854884380" Language="SFX">
+							<ShortName>Cave_Step_3.wav</ShortName>
+							<Path>SFX\Cave_Step_3_10C4C929.wem</Path>
+						</File>
+						<File Id="866839701" Language="SFX">
+							<ShortName>Forest_Step_6.wav</ShortName>
+							<Path>SFX\Forest_Step_6_10C4C929.wem</Path>
+						</File>
+						<File Id="867368377" Language="SFX">
+							<ShortName>Forest_Step_2.wav</ShortName>
+							<Path>SFX\Forest_Step_2_10C4C929.wem</Path>
+						</File>
+						<File Id="979774607" Language="SFX">
+							<ShortName>Cave_Step_8.wav</ShortName>
+							<Path>SFX\Cave_Step_8_10C4C929.wem</Path>
+						</File>
+						<File Id="995300493" Language="SFX">
+							<ShortName>Cave_Step_2.wav</ShortName>
+							<Path>SFX\Cave_Step_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<DefaultSwitchValue>{5CC49B6B-E562-4009-9E64-8D4C6E31A744}</DefaultSwitchValue>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}">
+							<Media>
+								<File Id="290193867"/>
+								<File Id="424072129"/>
+								<File Id="524868717"/>
+								<File Id="584931505"/>
+								<File Id="795309854"/>
+								<File Id="866839701"/>
+								<File Id="867368377"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}">
+							<Media>
+								<File Id="22772108"/>
+								<File Id="318481171"/>
+								<File Id="428815167"/>
+								<File Id="549460824"/>
+								<File Id="651640219"/>
+								<File Id="698997697"/>
+								<File Id="854884380"/>
+								<File Id="979774607"/>
+								<File Id="995300493"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1537061107" Name="Wind" ObjectPath="\Events\Default Work Unit\Ambience\Forest\Wind" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="42081584" Language="SFX">
+							<ShortName>AmbientWind.wav</ShortName>
+							<Path>SFX\AmbientWind_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="2385628198" Name="footsteps" ObjectPath="\Switches\Default Work Unit\footsteps" GUID="{72749E63-BD61-4708-A36F-0E957A3D4B95}">
+					<Switches>
+						<Switch Id="491961918" Name="Forest" ObjectPath="\Switches\Default Work Unit\footsteps\Forest" GUID="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}"/>
+						<Switch Id="4122393694" Name="Cave" ObjectPath="\Switches\Default Work Unit\footsteps\Cave" GUID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
