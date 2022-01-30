@@ -422,6 +422,56 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Dialogue"",
+            ""id"": ""826c1987-7b97-4371-911b-343efb3a1f8a"",
+            ""actions"": [
+                {
+                    ""name"": ""NextDialogue"",
+                    ""type"": ""Button"",
+                    ""id"": ""7fabc94d-8595-429c-af5a-bddcd3734b9f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""119576ee-bffa-4c84-a150-aa2d8c4d6f61"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextDialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d955053f-5f81-4c60-97ed-483836012c8c"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextDialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""faec0a31-30a0-4baa-8484-3fdb6ac94fba"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextDialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -487,6 +537,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Menu_Select = m_Menu.FindAction("Select", throwIfNotFound: true);
         m_Menu_HighlightUp = m_Menu.FindAction("HighlightUp", throwIfNotFound: true);
         m_Menu_HighlightDown = m_Menu.FindAction("HighlightDown", throwIfNotFound: true);
+        // Dialogue
+        m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
+        m_Dialogue_NextDialogue = m_Dialogue.FindAction("NextDialogue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -697,6 +750,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public MenuActions @Menu => new MenuActions(this);
+
+    // Dialogue
+    private readonly InputActionMap m_Dialogue;
+    private IDialogueActions m_DialogueActionsCallbackInterface;
+    private readonly InputAction m_Dialogue_NextDialogue;
+    public struct DialogueActions
+    {
+        private @PlayerControls m_Wrapper;
+        public DialogueActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @NextDialogue => m_Wrapper.m_Dialogue_NextDialogue;
+        public InputActionMap Get() { return m_Wrapper.m_Dialogue; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(DialogueActions set) { return set.Get(); }
+        public void SetCallbacks(IDialogueActions instance)
+        {
+            if (m_Wrapper.m_DialogueActionsCallbackInterface != null)
+            {
+                @NextDialogue.started -= m_Wrapper.m_DialogueActionsCallbackInterface.OnNextDialogue;
+                @NextDialogue.performed -= m_Wrapper.m_DialogueActionsCallbackInterface.OnNextDialogue;
+                @NextDialogue.canceled -= m_Wrapper.m_DialogueActionsCallbackInterface.OnNextDialogue;
+            }
+            m_Wrapper.m_DialogueActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @NextDialogue.started += instance.OnNextDialogue;
+                @NextDialogue.performed += instance.OnNextDialogue;
+                @NextDialogue.canceled += instance.OnNextDialogue;
+            }
+        }
+    }
+    public DialogueActions @Dialogue => new DialogueActions(this);
     private int m_Keyboard_BodySchemeIndex = -1;
     public InputControlScheme Keyboard_BodyScheme
     {
@@ -751,5 +837,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnSelect(InputAction.CallbackContext context);
         void OnHighlightUp(InputAction.CallbackContext context);
         void OnHighlightDown(InputAction.CallbackContext context);
+    }
+    public interface IDialogueActions
+    {
+        void OnNextDialogue(InputAction.CallbackContext context);
     }
 }
