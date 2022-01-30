@@ -519,11 +519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1593580971499022644, guid: b94b0948a0811c64faeb00dd37e30b55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.780014
+      value: 133.69
       objectReference: {fileID: 0}
     - target: {fileID: 1593580971499022644, guid: b94b0948a0811c64faeb00dd37e30b55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.3
+      value: 18.83
       objectReference: {fileID: 0}
     - target: {fileID: 1593580971499022644, guid: b94b0948a0811c64faeb00dd37e30b55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3385,8 +3385,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270740175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 98.262, y: 10.333, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1526325203}
@@ -7210,7 +7210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &642020979
 Transform:
   m_ObjectHideFlags: 0
@@ -9315,11 +9315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3801785326957530833, guid: 13843be1ef1d6254ca5dc2a5fbe2a192, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.8
+      value: 133.70999
       objectReference: {fileID: 0}
     - target: {fileID: 3801785326957530833, guid: 13843be1ef1d6254ca5dc2a5fbe2a192, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.55
+      value: 18.08
       objectReference: {fileID: 0}
     - target: {fileID: 3801785326957530833, guid: 13843be1ef1d6254ca5dc2a5fbe2a192, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11165,8 +11165,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034680287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.800003, y: 14.1, z: 28.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 101.2, y: 16.1, z: 28.4}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 424963425}
@@ -16354,7 +16354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506363680
 Transform:
   m_ObjectHideFlags: 0
@@ -21058,7 +21058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1825007961
 Transform:
   m_ObjectHideFlags: 0

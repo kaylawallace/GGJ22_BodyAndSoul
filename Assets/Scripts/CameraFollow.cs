@@ -10,10 +10,12 @@ public class CameraFollow : MonoBehaviour
     public float smoothTime = .5f;
     public float minZoom = 30f, maxZoom = 20f;
     public float zoomLimiter = 20f;
+    public bool lockOnY;
 
     private Vector3 vel;
     private GameObject body, soul;
     private Camera cam;
+
 
     private void Start()
     {
@@ -59,8 +61,17 @@ public class CameraFollow : MonoBehaviour
     private void Move()
     {
         Vector3 centre = GetCentrePoint();
+        Vector3 newPos;
 
-        Vector3 newPos = centre + offset;
+        if (lockOnY)
+        {
+            newPos = new Vector3(centre.x + offset.x, transform.position.y, centre.z + offset.z);
+        }
+        else
+        {
+            newPos = centre + offset;
+        }
+        
 
         transform.position = Vector3.SmoothDamp(transform.position, newPos, ref vel, smoothTime);
     }
