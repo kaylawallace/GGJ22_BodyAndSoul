@@ -14,7 +14,16 @@
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="BodySoul_Distance" ID="{3DD490A8-EE2C-4E26-BCBC-340DC58362CB}"/>
+							<Value>9</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{48BE7972-1E94-4371-BC15-5419051F0A8C}"/>
 					</CurrentStateList>
