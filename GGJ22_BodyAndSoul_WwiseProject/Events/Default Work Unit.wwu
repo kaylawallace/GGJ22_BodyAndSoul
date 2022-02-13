@@ -5,23 +5,12 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{FA80FC59-A6A2-4A87-8039-A502D48FDEF3}" ShortID="1034000632">
 					<ChildrenList>
-						<Event Name="Play_Forest" ID="{13EC6EEE-1ED4-4663-A388-16EC88C6A157}">
+						<Event Name="Play_Main_State" ID="{229BEC17-F56E-46CE-972D-70E5E09A0C58}">
 							<ChildrenList>
-								<Action Name="" ID="{76477B57-DA58-4901-BF81-4B5D6EF002F6}" ShortID="933835722">
+								<Action Name="" ID="{9BEB25F4-B1DB-4434-AEFC-5DFFC23CB92E}" ShortID="961650902">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Forest" ID="{5A0F59BE-CE58-4B21-9A0E-DEF259EFDB14}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Cave" ID="{485DE27D-6891-44D4-9724-90E5AA6119FD}">
-							<ChildrenList>
-								<Action Name="" ID="{9D95C8BD-E7C6-46CB-8686-D625CE9246C2}" ShortID="730218696">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Caves" ID="{5AD73C77-7136-43AE-991B-C7AA00DB4A95}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+											<ObjectRef Name="Main State" ID="{99D5D37A-9E42-4197-A05F-80974FD6225A}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -89,17 +78,6 @@
 				</Folder>
 				<Folder Name="Enemy" ID="{46F78F34-7C76-4F1E-993B-914E2DF2666B}" ShortID="1002868328"/>
 				<Folder Name="Dialogue" ID="{8B039518-ADFA-4C22-8ECA-EBBC505D7F11}" ShortID="727285556"/>
-				<Event Name="Play_Caves_Playlist" ID="{46665C22-F539-4DBF-B954-99EFEF5CB587}">
-					<ChildrenList>
-						<Action Name="" ID="{2AC14994-6FD5-4645-A67C-B998EC1D4889}" ShortID="257154896">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Caves Playlist" ID="{76B52F68-E9BB-4983-9645-BFE78A4C9D70}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

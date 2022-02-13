@@ -3,9 +3,15 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{E66713D3-F8F5-4B4A-AA1F-CD34B42B797A}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Location" ID="{B97BC8B9-D8A4-4991-8D64-D7F8F181A36F}">
+				<StateGroup Name="BodySoul_Rest" ID="{A8985B39-22CC-4509-875B-5154F033D649}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<State Name="None" ID="{48BE7972-1E94-4371-BC15-5419051F0A8C}"/>
+						<State Name="None" ID="{BED75C60-5B43-42D1-8F88-3EB12ED3BA24}"/>
+						<State Name="Resting" ID="{70151E45-C30C-4EF0-A0A6-46ED53B93176}"/>
+						<State Name="Active" ID="{7C22E6E2-B9B9-4D7D-A46D-651330F5AD8A}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

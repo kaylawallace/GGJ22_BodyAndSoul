@@ -15,7 +15,9 @@
 					<ChildrenList>
 						<MusicSwitchContainer Name="Caves Switch" ID="{5F994699-B436-41CE-85FF-2BF089BC44BE}" ShortID="570063767">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="15"/>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="130"/>
 							</PropertyList>
 							<ReferenceList>
@@ -29,7 +31,9 @@
 							<ChildrenList>
 								<MusicPlaylistContainer Name="Caves Playlist" ID="{76B52F68-E9BB-4983-9645-BFE78A4C9D70}" ShortID="111327026">
 									<PropertyList>
+										<Property Name="Color" Type="int16" Value="15"/>
 										<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Tempo" Type="Real64" Value="130"/>
 									</PropertyList>
@@ -44,8 +48,9 @@
 									<ChildrenList>
 										<MusicSegment Name="Caves" ID="{5AD73C77-7136-43AE-991B-C7AA00DB4A95}" ShortID="303983385">
 											<PropertyList>
+												<Property Name="Color" Type="int16" Value="15"/>
 												<Property Name="EndPosition" Type="Real64" Value="146538.461538462"/>
-												<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="Tempo" Type="Real64" Value="130"/>
 											</PropertyList>
 											<ReferenceList>
@@ -80,7 +85,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>60.16043</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Constant</SegmentShape>
 																			</Point>
@@ -131,8 +136,40 @@
 																								<Property Name="EndTrimOffset" Type="Real64" Value="73846.1678004535"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="0.153846153846189"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="Caves Soft Piano Master" ID="{E099D977-EEE8-440A-9163-318EFD8DD69C}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{5DE4F9BB-FE18-4564-AA78-D66F373BC7FF}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.86147</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>71.991341991342</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>73.8461678004535</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -161,13 +198,19 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-0</YPos>
+																				<YPos>0</YPos>
 																				<Flags>5</Flags>
 																				<SegmentShape>SCurve</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>78.52661</XPos>
-																				<YPos>-200</YPos>
+																				<XPos>68.24742</XPos>
+																				<YPos>0.14978</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>91.92869</XPos>
+																				<YPos>-18.94585</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>Constant</SegmentShape>
 																			</Point>
@@ -192,24 +235,19 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-200</YPos>
+																				<YPos>-5.6807</YPos>
 																				<Flags>5</Flags>
+																				<SegmentShape>Constant</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>59.91989</XPos>
-																				<YPos>-200</YPos>
+																				<XPos>75.12629</XPos>
+																				<YPos>-5.68289</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>SCurve</SegmentShape>
 																			</Point>
 																			<Point>
-																				<XPos>80.05355</XPos>
-																				<YPos>-3.98932</YPos>
-																				<Flags>0</Flags>
-																				<SegmentShape>Exp3</SegmentShape>
-																			</Point>
-																			<Point>
 																				<XPos>100</XPos>
-																				<YPos>-2.18289</YPos>
+																				<YPos>-0.53113</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -254,6 +292,7 @@
 																								<Property Name="EndTrimOffset" Type="Real64" Value="73846.1678004535"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="0.153846153846189"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="Caves High Piano Master" ID="{CD28F10A-155C-4BB1-9A73-77BAB56BB521}"/>
 																							<PropertyCurveList>
@@ -276,6 +315,35 @@
 																										</PointList>
 																									</Curve>
 																								</PropertyCurve>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{8A9A72D8-AE04-4BD3-94F8-A738EA979864}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.9047619047619</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>72.034632034632</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>73.8461678004535</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
 																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
@@ -291,6 +359,9 @@
 												<MusicTrack Name="Caves Marimba+Harp Master" ID="{E7B71D19-851A-4728-A9DD-19D82306F03A}" ShortID="764929022">
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
 															<RTPCList>
 																<RTPC Name="" ID="{8A342A26-1503-4D45-9C6A-7AC7EEA4257A}" ShortID="142870989">
 																	<ReferenceList>
@@ -305,18 +376,18 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>0</YPos>
+																				<YPos>-1.6909</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
 																				<XPos>79.94652</XPos>
-																				<YPos>-0.15239</YPos>
+																				<YPos>-1.5327</YPos>
 																				<Flags>0</Flags>
 																				<SegmentShape>SCurve</SegmentShape>
 																			</Point>
 																			<Point>
 																				<XPos>100</XPos>
-																				<YPos>-3.30192</YPos>
+																				<YPos>-200</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -397,8 +468,40 @@
 																								<Property Name="EndTrimOffset" Type="Real64" Value="73846.1678004535"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="0.153846153846189"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="Caves Marimba+Harp Master" ID="{287EFFD6-570E-4831-A9D3-9037562FE2DE}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{EA11A77A-BC41-465D-821D-23064C48CEA1}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.86147186147186</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>71.991341991342</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>73.8461678004535</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -524,8 +627,40 @@
 																								<Property Name="EndTrimOffset" Type="Real64" Value="73846.1678004535"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																								<Property Name="PlayAt" Type="Real64" Value="0.153846153846189"/>
 																							</PropertyList>
 																							<AudioSourceRef Name="Caves Strings+Oboe Master" ID="{A63B8155-103E-40A2-ADB2-16DC55B42269}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{1A8AC222-9CB9-4B5F-9454-9658C536E3C4}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.9047619047619</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>72.034632034632</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>73.8461678004535</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -544,7 +679,7 @@
 														<Local>
 															<MusicCue Name="Entry Cue" ID="{33BF5BCE-696A-41AD-A971-495B05B5D985}">
 																<PropertyList>
-																	<Property Name="TimeMs" Type="Real64" Value="1846"/>
+																	<Property Name="TimeMs" Type="Real64" Value="1846.15384615385"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -554,7 +689,7 @@
 															<MusicCue Name="Exit Cue" ID="{2D4C66E9-186B-4B4D-BB42-EA23E669D910}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="72000"/>
+																	<Property Name="TimeMs" Type="Real64" Value="72000.1538461538"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -611,6 +746,13 @@
 							<ObjectLists/>
 						</MusicSwitchContainer>
 						<MusicSwitchContainer Name="Forest Switch" ID="{50EB7566-89E0-4891-A1B0-48078C25C965}" ShortID="845441674">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="128"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -632,8 +774,9 @@
 									<ChildrenList>
 										<MusicSegment Name="Forest" ID="{5A0F59BE-CE58-4B21-9A0E-DEF259EFDB14}" ShortID="194067608">
 											<PropertyList>
+												<Property Name="Color" Type="int16" Value="4"/>
 												<Property Name="EndPosition" Type="Real64" Value="87187.5056689342"/>
-												<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="Tempo" Type="Real64" Value="128"/>
 											</PropertyList>
 											<ReferenceList>
@@ -645,26 +788,109 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="Forest_Percussion_Master" ID="{D98AE13C-A1FE-4B81-8A9C-F8F1D24DB604}" ShortID="514754570">
+												<MusicTrack Name="Forest Pedal Master" ID="{F0129C98-018D-42BA-A5FE-5F5471EF3D6D}" ShortID="431721039">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+															<RTPCList>
+																<RTPC Name="" ID="{4DF2D126-1FA0-4BFC-8C65-A3C259A5FFBD}" ShortID="561660230">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{0B1202B8-BAFD-4133-A20B-D0D1FEE6B54A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-0.07586</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>25.10204</XPos>
+																				<YPos>-6.23428</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>75.5102</XPos>
+																				<YPos>-199.99999</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+																<RTPC Name="" ID="{F9729B53-88A7-46FE-B211-ADC111F63595}" ShortID="313628546">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Distance" ID="{3DD490A8-EE2C-4E26-BCBC-340DC58362CB}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{AA0F87C2-99FD-4BDE-AEF5-17C778454248}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-6</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>25.10204</XPos>
+																				<YPos>-6</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>75.10204</XPos>
+																				<YPos>-5.93234</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-2.83239</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+															</RTPCList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Forest_Percussion_Master" ID="{04E398B9-AB1E-47A2-B5E1-CB382DA48A71}">
+														<AudioFileSource Name="Forest Pedal Master" ID="{48889197-2625-4873-B428-6BA011BDBD04}">
 															<Language>SFX</Language>
-															<AudioFile>Forest_Percussion_Master.wav</AudioFile>
+															<AudioFile>Forest Pedal Master.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="255558496"/>
+																<MediaID ID="430325922"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{F593A9D9-F8C5-431A-B900-E228F974ED7B}">
+														<MusicTransition Name="Root" ID="{E854C9A0-7738-4537-8358-5C6965D36A48}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
+															<ChildrenList>
+																<MusicTransition Name="Transition" ID="{9451862D-24ED-49F5-9C94-E03515AC6F5F}">
+																	<TransitionInfo/>
+																</MusicTransition>
+															</ChildrenList>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -672,18 +898,50 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{26CF68BD-CC05-4B83-A9A5-72FA2DB6214C}">
+																	<MusicTrackSequence Name="" ID="{F2C6A021-45B5-4E52-BBA7-6F7BACAB7F4A}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Forest_Percussion_Master" ID="{8DFD956E-E40A-44DF-B8C4-E61F5223444A}">
+																						<MusicClip Name="Forest Pedal Master" ID="{0E27AD90-2706-407E-B305-028D5A2048CF}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="87187.5056689342"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="46406.2358276644"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Forest_Percussion_Master" ID="{04E398B9-AB1E-47A2-B5E1-CB382DA48A71}"/>
+																							<AudioSourceRef Name="Forest Pedal Master" ID="{48889197-2625-4873-B428-6BA011BDBD04}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{4C610511-E24D-4409-AEA7-0D487E78682E}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Exp2</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>1.41126</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>45.00433</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>46.4062358276644</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -695,26 +953,102 @@
 														</ObjectList>
 													</ObjectLists>
 												</MusicTrack>
-												<MusicTrack Name="Forest_Piano_Master" ID="{8763EF2E-7594-4692-945A-8CFA619D78F3}" ShortID="1048853544">
+												<MusicTrack Name="Forest Percussion Master" ID="{20D8CC83-7F65-4A14-9D57-B32CA5760B9F}" ShortID="285741313">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<RTPCList>
+																<RTPC Name="" ID="{2AC29156-2633-45B3-9CC9-C2F1FAB9CBB8}" ShortID="748665704">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Distance" ID="{3DD490A8-EE2C-4E26-BCBC-340DC58362CB}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{B18AE171-6B23-4BEA-98FA-02214C785A6C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0.07586</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>49.7959183673469</XPos>
+																				<YPos>0.0380019996252714</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>Log3</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+																<RTPC Name="" ID="{EC28BBDF-2021-4729-93D8-4C03253884D7}" ShortID="661252020">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{F9398C0B-7DA1-401D-9083-5F584D2990C3}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>25</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>75</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+															</RTPCList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Forest_Piano_Master" ID="{567ACB59-EE4A-4AD9-A7B0-182BD93595D5}">
+														<AudioFileSource Name="Forest Percussion Master" ID="{232DDC1D-E50E-4AC9-9693-7ADA594D3264}">
 															<Language>SFX</Language>
-															<AudioFile>Forest_Piano_Master.wav</AudioFile>
+															<AudioFile>Forest Percussion Master.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="919502635"/>
+																<MediaID ID="675373805"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{B46F2FAF-7F1A-4635-B205-22134C065A75}">
+														<MusicTransition Name="Root" ID="{50601039-CF46-4AC3-BABF-59C48375C180}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
+															<ChildrenList>
+																<MusicTransition Name="Transition" ID="{70E145F4-54B7-4A15-800E-70C00D8D591E}">
+																	<TransitionInfo/>
+																</MusicTransition>
+															</ChildrenList>
 															<TransitionInfo/>
 														</MusicTransition>
 													</TransitionList>
@@ -722,18 +1056,49 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{5FECEE8A-57A3-4EA8-B43F-E6D8FE1C87E7}">
+																	<MusicTrackSequence Name="" ID="{C234A58B-EAAB-48E4-8AE7-18D4EF446B48}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Forest_Piano_Master" ID="{3869147B-DE89-4C81-8260-BDB5269E3DB8}">
+																						<MusicClip Name="Forest Percussion Master" ID="{61C891C8-93A4-4AD0-8D0D-31CB95DC1749}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="87187.5056689342"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="46406.2358276644"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Forest_Piano_Master" ID="{567ACB59-EE4A-4AD9-A7B0-182BD93595D5}"/>
+																							<AudioSourceRef Name="Forest Percussion Master" ID="{232DDC1D-E50E-4AC9-9693-7ADA594D3264}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{11899331-FFED-4A16-B8C9-45C643522170}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.4025974025974</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>45</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>46.4062358276644</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -745,23 +1110,62 @@
 														</ObjectList>
 													</ObjectLists>
 												</MusicTrack>
-												<MusicTrack Name="Forest_Strings_Master" ID="{1600ECEE-33E8-4D5E-B0F3-5162169198FB}" ShortID="50936013">
+												<MusicTrack Name="Forest Soft Piano Master" ID="{29F265FD-2C79-425A-9039-CECFAA8FCF20}" ShortID="1070462399">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+															<RTPCList>
+																<RTPC Name="" ID="{284F5959-838C-41D0-9652-07F1F00F170C}" ShortID="401910971">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{D8131B39-2A5D-404F-9F93-27ED7345BB78}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>24.89796</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+															</RTPCList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Forest_Strings_Master" ID="{68BE2163-A3D1-42C6-9944-958A890BFFF3}">
+														<AudioFileSource Name="Forest Soft Piano Master" ID="{0EBAF3CA-B443-4C50-BD86-FDE9B902B758}">
 															<Language>SFX</Language>
-															<AudioFile>Forest_Strings_Master.wav</AudioFile>
+															<AudioFile>Forest Soft Piano Master.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="75699893"/>
+																<MediaID ID="468797123"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
-														<MusicTransition Name="Root" ID="{93E40B30-DE88-428B-9579-CDC5DE20FACD}">
+														<MusicTransition Name="Root" ID="{474125F8-0C2F-40BA-ACBD-AC8B0B5F4870}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -772,18 +1176,202 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{68BFDFE3-0AAE-4A78-8664-943FE1D83328}">
+																	<MusicTrackSequence Name="" ID="{9AF6F8B1-8012-4997-9099-5117FB74A63F}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="Forest_Strings_Master" ID="{574DA63E-9DEE-4E5C-8B3F-920EC6586D7B}">
+																						<MusicClip Name="Forest Soft Piano Master" ID="{4EF54C41-CFDB-43DE-BD97-ACDF71590F58}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="87187.5056689342"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="46406.2358276644"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="Forest_Strings_Master" ID="{68BE2163-A3D1-42C6-9944-958A890BFFF3}"/>
+																							<AudioSourceRef Name="Forest Soft Piano Master" ID="{0EBAF3CA-B443-4C50-BD86-FDE9B902B758}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{A557160F-DE23-4165-83B4-EE47CE620015}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																												<SegmentShape>Exp1</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>1.40693</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>45</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>46.4062358276644</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="Forest Strings Master" ID="{D36080B8-2831-4352-B2BE-DD9294731415}" ShortID="496836626">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<RTPCList>
+																<RTPC Name="" ID="{F20F1267-CD92-4E7D-B465-185D554885EE}" ShortID="202545744">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Distance" ID="{3DD490A8-EE2C-4E26-BCBC-340DC58362CB}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{56153A35-A8C0-45E6-BA23-4A8D1499A105}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-0.2296</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>50.20408</XPos>
+																				<YPos>-0.11404</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+																<RTPC Name="" ID="{32F06882-656F-4A6E-BEAD-14ADC49F90FA}" ShortID="301257144">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}" WorkUnitID="{57F28304-415A-43DB-AA21-7DAF0B9356E5}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{F53E129D-E603-489C-8BA4-60048DEE0E1A}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>25.10204</XPos>
+																				<YPos>-0.04368</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>50.20408</XPos>
+																				<YPos>-6.08092</YPos>
+																				<Flags>0</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+															</RTPCList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Forest Strings Master" ID="{1DF82420-DDFF-4F85-8AEE-E83812889334}">
+															<Language>SFX</Language>
+															<AudioFile>Forest Strings Master.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="387318595"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{82632357-DB68-4F81-AFC8-59CE9CE6C541}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{AFBB317F-84C2-4ED8-8469-501BA20E70A4}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="Forest Strings Master" ID="{ABC497AC-4B8C-4A40-A83B-4908FEC24CCC}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="46406.2358276644"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="Forest Strings Master" ID="{1DF82420-DDFF-4F85-8AEE-E83812889334}"/>
+																							<PropertyCurveList>
+																								<PropertyCurve PropertyName="Volume">
+																									<Curve Name="" ID="{1301AB37-B44F-4D09-AD36-B0DF45C07120}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>1.4026</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>45</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>46.4062358276644</XPos>
+																												<YPos>-96.3</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</PropertyCurve>
+																							</PropertyCurveList>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -800,7 +1388,11 @@
 												<ObjectList Name="Cues">
 													<Reference>
 														<Local>
-															<MusicCue Name="Entry Cue" ID="{148D0796-8DF2-41A3-967D-D7F2B9D94E76}"/>
+															<MusicCue Name="Entry Cue" ID="{148D0796-8DF2-41A3-967D-D7F2B9D94E76}">
+																<PropertyList>
+																	<Property Name="TimeMs" Type="Real64" Value="1406"/>
+																</PropertyList>
+															</MusicCue>
 														</Local>
 													</Reference>
 													<Reference>
@@ -808,7 +1400,7 @@
 															<MusicCue Name="Exit Cue" ID="{FD5912C1-99F0-4847-BA58-D9CA157F29C4}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="1000"/>
+																	<Property Name="TimeMs" Type="Real64" Value="44999.75"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -836,6 +1428,15 @@
 											<PropertyList>
 												<Property Name="LoopCount" Type="int16" Value="0"/>
 											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{FE18B021-CE8A-4C86-B640-BCE2FA50E459}" ShortID="1021603900">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="Forest" ID="{5A0F59BE-CE58-4B21-9A0E-DEF259EFDB14}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
 										</MusicPlaylistItem>
 									</Playlist>
 								</MusicPlaylistContainer>
@@ -863,7 +1464,29 @@
 							</PropertyList>
 							<ChildrenList>
 								<MusicTransition Name="Transition" ID="{78EE419E-F3E5-4AF3-ADA0-EFE54F2A458B}">
-									<TransitionInfo/>
+									<PropertyList>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{633D161F-7079-4A2F-8E2F-948FC05C1147}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{DF36B588-194F-4813-A3FC-E6CB887BC3EC}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
@@ -871,8 +1494,26 @@
 					</TransitionList>
 					<ObjectLists/>
 					<ArgumentList>
-						<ArgumentRef Name="Location" ID="{B97BC8B9-D8A4-4991-8D64-D7F8F181A36F}"/>
+						<ArgumentRef Name="Music" ID="{4BEFA8C6-D57A-49CF-9DAA-098417EF42FB}"/>
 					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Cave" ID="{3A69A09B-4692-418E-A17C-C34E47BFC153}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Caves Playlist" ID="{76B52F68-E9BB-4983-9645-BFE78A4C9D70}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Forest" ID="{8CF03DF0-BBA6-4EFC-B75D-DCE5877C87D0}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Forest Playlist" ID="{FECC50E0-6E19-463C-82E4-DBB0F9A4FE8D}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
 				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
