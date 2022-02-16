@@ -7,8 +7,9 @@ public class PlayerDistance : MonoBehaviour
     float maxDist = 10f;
     float dist = 0f;
     GameObject body, soul;
+    SoulController sController;
     Vector3 bPos, sPos;
-    float bSpeed, sSpeed;
+    float bSpeed, sSpeed, sPossessSpeed;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class PlayerDistance : MonoBehaviour
         soul = GameObject.FindGameObjectWithTag("Soul");
         bSpeed = body.GetComponent<BodyController>().speed;
         sSpeed = soul.GetComponent<SoulController>().speed;
+        sPossessSpeed = soul.GetComponent<SoulController>().possessSpeed;
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class PlayerDistance : MonoBehaviour
     {
         bPos = body.transform.position;
         sPos = soul.transform.position;
+        
 
         dist = Vector3.Distance(bPos, sPos);
         if (dist >= maxDist)
@@ -51,7 +54,7 @@ public class PlayerDistance : MonoBehaviour
             {
                 body.GetComponent<BodyController>().speed = bSpeed;
             }
-            if (soul.GetComponent<SoulController>().speed != sSpeed)
+            if (soul.GetComponent<SoulController>().speed != sSpeed && soul.GetComponent<SoulController>().speed != sPossessSpeed)
             {
                 soul.GetComponent<SoulController>().speed = sSpeed;
             }

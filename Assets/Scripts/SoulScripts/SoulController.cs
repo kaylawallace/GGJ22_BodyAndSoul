@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class SoulController : MonoBehaviour
 {
-    public float speed = 2.0f;
+    public float speed = 4.0f, possessSpeed = 15.0f;
     public float dashSpeed;
     public float startDashTime;
     public float dashCooldown;
@@ -15,21 +15,21 @@ public class SoulController : MonoBehaviour
     private Rigidbody rb;
     private Vector2 movInput = Vector2.zero;
     private Transform toPossess;
-    private float dashTime;
     private Platform p;
+    private GameObject body;
+    private float mass; 
 
     private bool possessed;
     private bool unpossessed;
     private bool possessing;
     private bool inRange;
-    private bool cooling;
     private bool facingRight = true;
 
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-
-        dashTime = startDashTime;
+        body = GameObject.Find("Body");
+        mass = rb.mass; 
     }
 
     void Update()
@@ -82,7 +82,11 @@ public class SoulController : MonoBehaviour
         if (inRange && p)
         {
             toPossess.parent = transform;
+            rb.mass = 3;
+            rb.drag = 5;
+            speed = possessSpeed;
             //gameObject.GetComponent<MeshRenderer>().enabled = false;
+            //body.transform.parent = transform;
 
             for (int i = 0; i < renderers.Length; i++)
             {
@@ -121,11 +125,12 @@ public class SoulController : MonoBehaviour
     {
         if (possessing)
         {
+           
             if (toPossess)
             {
                 toPossess.parent = null;
             }
-
+            //body.transform.parent = null;
             //gameObject.GetComponent<MeshRenderer>().enabled = true;
             for (int i = 0; i < renderers.Length; i++)
             {
@@ -162,15 +167,16 @@ public class SoulController : MonoBehaviour
                 }
             }
 
+            rb.mass = mass;
+            rb.drag = 3.5f;
+            speed = 3;
             possessing = false;
         }
     }
 
     IEnumerator Cooldown(float cooldownTime)
     {
-        cooling = true;
         yield return new WaitForSeconds(cooldownTime);
-        cooling = false; 
     }
 
     private void OnTriggerEnter(Collider other)
