@@ -10,7 +10,7 @@ public class RespawnPlayers : MonoBehaviour
     private Vector3 soulSpawnPosOffset = new Vector3(-2f, 1.5f, 0f);
     private Animator anim;
     private bool _dead;
-    private GameObject body, soul;
+    private GameObject body, soul, line;
     private SkinnedMeshRenderer[] sRenderers;
 
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class RespawnPlayers : MonoBehaviour
         health = maxHealth;
         body = GameObject.Find("Body");
         soul = GameObject.Find("Soul");
+        line = GameObject.Find("Line");
 
         anim = body.GetComponent<BodyController>().animController;
         _dead = body.GetComponent<BodyController>().dead;
@@ -46,6 +47,8 @@ public class RespawnPlayers : MonoBehaviour
                 {
                     sRenderers[i].enabled = false;
                 }
+
+                line.GetComponent<LineRenderer>().enabled = false; 
 
                 Invoke("Death", 2.8f);
                 StartCoroutine(RespawnTime(2.8f));
@@ -75,6 +78,8 @@ public class RespawnPlayers : MonoBehaviour
         {
             sRenderers[i].enabled = true;
         }
+
+        line.GetComponent<LineRenderer>().enabled = true;
 
         _dead = false; 
     }

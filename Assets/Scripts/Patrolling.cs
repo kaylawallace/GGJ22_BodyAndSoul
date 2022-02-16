@@ -14,8 +14,6 @@ public class Patrolling : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.autoBraking = true;
-        //agent.baseOffset = 1f;
-        //agent.height = 1f;
         currPoint = 0;
         agent.destination = points[currPoint].transform.position;
     }
