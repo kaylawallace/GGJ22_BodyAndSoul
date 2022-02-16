@@ -22,49 +22,45 @@ public class BodyController : MonoBehaviour
     private Vector2 movInput = Vector2.zero;
     private bool jumped = false;
     private bool facingRight = true;
-    private GameObject soul; 
+    private GameObject soul;
+    [HideInInspector]public bool dead; 
 
 
     private void Start()
     {
-        //controller = gameObject.GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         soul = GameObject.Find("Soul");
+        dead = false;
     }
 
     void Update()
     {
-        grounded = isGrounded();
-        if (grounded && vel.y < 0)
+        if (!dead)
         {
-            vel.y = 0f;
-        }
+            grounded = isGrounded();
+            if (grounded && vel.y < 0)
+            {
+                vel.y = 0f;
+            }
 
-        //if (isOnPlatform())
-        //{
-        //    transform.parent = soul.transform;
-        //}
-        //else
-        //{
-        //    transform.parent = null;
-        //}
+            Jump();
 
-        Jump();
-
-        isOnPlatform();
+            isOnPlatform();
+        }      
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (!dead)
+        {
+            Move();
+        }      
     }
 
     public void Move()
     {
         Vector3 move = new Vector3(movInput.x, 0, movInput.y);
-        //controller.Move(move * Time.deltaTime * speed);
         rb.velocity = new Vector3(move.x * speed, vel.y, move.z * speed);
-        //print(rb.velocity);
 
         if (movInput.x == 1 && !facingRight)
         {
@@ -88,10 +84,8 @@ public class BodyController : MonoBehaviour
 
     public void Jump()
     {
-        // Changes the height position of the player..
         if (jumped && isGrounded())
         {
-            //vel.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
             vel = Vector3.up * jumpHeight;
         }
 
@@ -107,7 +101,6 @@ public class BodyController : MonoBehaviour
 
         vel.y += gravity * Time.deltaTime;
         rb.velocity = vel * Time.deltaTime;
-        //controller.Move(vel * Time.deltaTime);  
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -129,21 +122,6 @@ public class BodyController : MonoBehaviour
     public bool isGrounded()
     {
         bool _grounded = Physics.CheckSphere(feetPos.position, checkRadius, whatIsGround);
-
-        //for (int i = 0; i < colliders.Length; i++)
-        //{
-        //    print(colliders[i]);
-        //    if (colliders[i].CompareTag("Ground"))
-        //    {
-        //        _grounded = true;
-        //    }
-        //    else
-        //    {
-        //        _grounded = false; 
-        //    }
-        //}
-        //print(_grounded);
-        //print(_grounded);
         return _grounded;
     }
 
@@ -170,7 +148,6 @@ public class BodyController : MonoBehaviour
                 _onPlatform = false; 
             }
         }
-        //print(transform.parent);
         return _onPlatform; 
     }
 }
