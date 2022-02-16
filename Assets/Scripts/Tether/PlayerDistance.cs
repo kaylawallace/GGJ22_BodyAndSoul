@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDistance : MonoBehaviour
 {
-    float maxDist = 10f;
+    public float maxDist;
     float dist = 0f;
     GameObject body, soul;
     SoulController sController;

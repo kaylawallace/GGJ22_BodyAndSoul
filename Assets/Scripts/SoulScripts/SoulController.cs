@@ -21,7 +21,7 @@ public class SoulController : MonoBehaviour
 
     private bool possessed;
     private bool unpossessed;
-    private bool possessing;
+    public bool possessing;
     private bool inRange;
     private bool facingRight = true;
 
