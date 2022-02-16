@@ -11,6 +11,7 @@ public class RespawnPlayers : MonoBehaviour
     private Animator anim;
     private bool _dead;
     private GameObject body, soul;
+    private SkinnedMeshRenderer[] sRenderers;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class RespawnPlayers : MonoBehaviour
 
         anim = body.GetComponent<BodyController>().animController;
         _dead = body.GetComponent<BodyController>().dead;
+        sRenderers = soul.GetComponent<SoulController>().renderers;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,6 +41,12 @@ public class RespawnPlayers : MonoBehaviour
             {
                 _dead = true;
                 anim.SetTrigger("Death");
+
+                for (int i = 0; i < sRenderers.Length; i++)
+                {
+                    sRenderers[i].enabled = false;
+                }
+
                 Invoke("Death", 2.8f);
                 StartCoroutine(RespawnTime(2.8f));
             }
@@ -49,9 +57,6 @@ public class RespawnPlayers : MonoBehaviour
     {
         body.GetComponent<BodyController>().enabled = false;
         soul.GetComponent<SoulController>().enabled = false;
-
-        body.GetComponent<MeshRenderer>().enabled = false;
-        soul.GetComponent<MeshRenderer>().enabled = false; 
     }
 
     public void Respawn()
@@ -65,6 +70,11 @@ public class RespawnPlayers : MonoBehaviour
 
         body.GetComponent<BodyController>().enabled = true;
         soul.GetComponent<SoulController>().enabled = true;
+
+        for (int i = 0; i < sRenderers.Length; i++)
+        {
+            sRenderers[i].enabled = true;
+        }
 
         _dead = false; 
     }
