@@ -11,6 +11,7 @@
 						<Property Name="GainBand3" Type="Real32" Value="-2.5"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="New_Wwise_Guitar_Distortion" ID="{14B1853E-1552-43A6-843D-D072FE6F44A3}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

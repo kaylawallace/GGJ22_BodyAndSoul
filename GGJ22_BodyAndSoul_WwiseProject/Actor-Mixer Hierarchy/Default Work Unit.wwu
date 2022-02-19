@@ -568,7 +568,7 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</Sound>
-								<Sound Name="Death_Soul_1" ID="{902FF36F-18BD-48EA-844C-6E86470CCD97}" ShortID="57180234">
+								<Sound Name="Death_Soul" ID="{902FF36F-18BD-48EA-844C-6E86470CCD97}" ShortID="57180234">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -1011,6 +1011,115 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists/>
+				</ActorMixer>
+				<ActorMixer Name="Menu" ID="{4A0077CF-4247-48DF-927F-D244876175D6}" ShortID="836378281">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Menu" ID="{0986DF0C-9946-47EB-BB01-2762A5495EC5}" ShortID="874680923">
+							<ChildrenList>
+								<Sound Name="Menu_Back" ID="{3BA99827-C1FE-4B22-B5AA-9A2BE9A7E71F}" ShortID="260917333">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu_Back" ID="{B563B091-5B67-458F-BECD-C02DDE9C2238}">
+											<Language>SFX</Language>
+											<AudioFile>Menu_Back.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="433015154"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu_Back" ID="{B563B091-5B67-458F-BECD-C02DDE9C2238}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Menu_ChangeValue" ID="{34F30F85-7C8E-4567-9538-35160FC98521}" ShortID="138446304">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu_ChangeValue" ID="{555B261D-7ECF-48CF-8C90-B108C187651E}">
+											<Language>SFX</Language>
+											<AudioFile>Menu_ChangeValue.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="513242538"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu_ChangeValue" ID="{555B261D-7ECF-48CF-8C90-B108C187651E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Menu_Highlight" ID="{9924815C-5722-4E3D-A9EE-331A89B7E2ED}" ShortID="662619881">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu_Highlight" ID="{8EDECBB6-365F-4FF5-9F8B-0FDCC60EA8FE}">
+											<Language>SFX</Language>
+											<AudioFile>Menu_Highlight.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="3595647"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu_Highlight" ID="{8EDECBB6-365F-4FF5-9F8B-0FDCC60EA8FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Menu_Select" ID="{8D380374-2116-4EB2-BF59-75EB751D76C3}" ShortID="757794416">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Menu_Select" ID="{7354685A-70CD-4B8F-9E2F-BD5855B5B89B}">
+											<Language>SFX</Language>
+											<AudioFile>Menu_Select.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="216418745"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Menu_Select" ID="{7354685A-70CD-4B8F-9E2F-BD5855B5B89B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

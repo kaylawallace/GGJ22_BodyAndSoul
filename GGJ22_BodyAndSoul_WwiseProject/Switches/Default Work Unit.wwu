@@ -5,14 +5,22 @@
 			<ChildrenList>
 				<SwitchGroup Name="footsteps" ID="{72749E63-BD61-4708-A36F-0E957A3D4B95}">
 					<ChildrenList>
-						<Switch Name="Forest" ID="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}"/>
-						<Switch Name="Cave" ID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}"/>
+						<Switch Name="Forest" ID="{5CC49B6B-E562-4009-9E64-8D4C6E31A744}">
+							<Comment>Footsteps</Comment>
+						</Switch>
+						<Switch Name="Cave" ID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}">
+							<Comment>Footsteps</Comment>
+						</Switch>
 					</ChildrenList>
 				</SwitchGroup>
 				<SwitchGroup Name="Music" ID="{4BEFA8C6-D57A-49CF-9DAA-098417EF42FB}">
 					<ChildrenList>
-						<Switch Name="Cave" ID="{3A69A09B-4692-418E-A17C-C34E47BFC153}"/>
-						<Switch Name="Forest" ID="{8CF03DF0-BBA6-4EFC-B75D-DCE5877C87D0}"/>
+						<Switch Name="Cave" ID="{3A69A09B-4692-418E-A17C-C34E47BFC153}">
+							<Comment>Music</Comment>
+						</Switch>
+						<Switch Name="Forest" ID="{8CF03DF0-BBA6-4EFC-B75D-DCE5877C87D0}">
+							<Comment>Music</Comment>
+						</Switch>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

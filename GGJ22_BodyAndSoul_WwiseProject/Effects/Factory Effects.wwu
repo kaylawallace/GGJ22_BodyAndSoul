@@ -1166,6 +1166,7 @@
 										<Property Name="Filter1Gain" Type="Real32" Value="-2.5"/>
 										<Property Name="Filter2Freq" Type="Real32" Value="780"/>
 										<Property Name="HFDamping" Type="Real32" Value="3.05"/>
+										<Property Name="InputLFELevel" Type="Real32" Value="-10.3"/>
 										<Property Name="PreDelay" Type="Real32" Value="20"/>
 										<Property Name="Quality" Type="int32" Value="10"/>
 										<Property Name="ReverbLevel" Type="Real32" Value="-22"/>

@@ -16,6 +16,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Level_Change" ID="{6C4BBFEF-8687-4888-8404-0FBAF95EE74B}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Body" ID="{D29A5764-4BA2-4C66-913B-64EA88BAA845}" ShortID="65869113">
