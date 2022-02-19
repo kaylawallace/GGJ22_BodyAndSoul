@@ -46,7 +46,8 @@ public class BodyController : MonoBehaviour
             Jump();
 
             isOnPlatform();
-        }      
+        }
+        print(dead);
     }
 
     private void FixedUpdate()

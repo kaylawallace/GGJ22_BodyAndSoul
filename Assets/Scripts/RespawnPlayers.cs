@@ -10,7 +10,7 @@ public class RespawnPlayers : MonoBehaviour
     private Vector3 soulSpawnPosOffset = new Vector3(-2f, 1.5f, 0f);
     private Animator anim;
     private bool _dead;
-    private GameObject body, soul, line;
+    private GameObject body, soul, line, cam;
     private SkinnedMeshRenderer[] sRenderers;
 
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class RespawnPlayers : MonoBehaviour
         body = GameObject.Find("Body");
         soul = GameObject.Find("Soul");
         line = GameObject.Find("Line");
+        cam = GameObject.Find("Main Camera");
 
         anim = body.GetComponent<BodyController>().animController;
         _dead = body.GetComponent<BodyController>().dead;
@@ -60,6 +61,7 @@ public class RespawnPlayers : MonoBehaviour
     {
         body.GetComponent<BodyController>().enabled = false;
         soul.GetComponent<SoulController>().enabled = false;
+        soul.GetComponent<SoulController>().Unpossess();
     }
 
     public void Respawn()

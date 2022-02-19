@@ -54,8 +54,11 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
-        Move();
-        Zoom();
+        if (!body.GetComponent<BodyController>().dead)
+        {
+            Move();
+            Zoom();
+        }       
     }
 
     private void Move()
