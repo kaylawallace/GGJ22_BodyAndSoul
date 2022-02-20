@@ -308,8 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587f34348fb7c1e489b1bb785b7eeee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  possessSpeed: 30
+  speed: 2
   dashSpeed: 25
   startDashTime: 0.1
   dashCooldown: 0
@@ -319,7 +318,6 @@ MonoBehaviour:
   - {fileID: 811637391389383181}
   - {fileID: 6426529965672494689}
   - {fileID: 7308640898615823368}
-  possessing: 0
 --- !u!54 &3045948501246607869
 Rigidbody:
   m_ObjectHideFlags: 0
