@@ -61,6 +61,7 @@ public class RespawnPlayers : MonoBehaviour
     {
         body.GetComponent<BodyController>().enabled = false;
         soul.GetComponent<SoulController>().enabled = false;
+        body.GetComponent<Transform>().parent = null;
         soul.GetComponent<SoulController>().Unpossess();
     }
 

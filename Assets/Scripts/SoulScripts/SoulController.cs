@@ -34,7 +34,7 @@ public class SoulController : MonoBehaviour
 
     void Update()
     {
-        Move();
+        //Move();
 
         if (possessed)
         {
@@ -45,6 +45,11 @@ public class SoulController : MonoBehaviour
         {
             Unpossess();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
     }
 
     public void OnMove(InputAction.CallbackContext context)
