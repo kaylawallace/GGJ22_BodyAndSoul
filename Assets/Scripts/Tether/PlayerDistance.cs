@@ -56,7 +56,14 @@ public class PlayerDistance : MonoBehaviour
             }
             if (soul.GetComponent<SoulController>().speed != sSpeed && soul.GetComponent<SoulController>().speed != sPossessSpeed)
             {
-                soul.GetComponent<SoulController>().speed = sSpeed;
+                if (soul.GetComponent<SoulController>().possessing)
+                {
+                    soul.GetComponent<SoulController>().speed = sPossessSpeed;
+                }
+                else
+                {
+                    soul.GetComponent<SoulController>().speed = sSpeed;
+                }              
             }
         }     
     }
