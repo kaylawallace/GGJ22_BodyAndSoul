@@ -14,7 +14,9 @@
 							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Playing" ID="{70151E45-C30C-4EF0-A0A6-46ED53B93176}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Cave" ID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}"/>
 						<CurrentSwitchRef Name="Forest" ID="{8CF03DF0-BBA6-4EFC-B75D-DCE5877C87D0}"/>

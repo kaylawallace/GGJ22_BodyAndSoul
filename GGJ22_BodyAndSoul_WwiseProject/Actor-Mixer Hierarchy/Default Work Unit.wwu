@@ -462,6 +462,13 @@
 									</GroupingInfo>
 								</SwitchContainer>
 								<Sound Name="Magic Sound" ID="{A0D7E5C3-84CC-4E86-9601-1082AF4CBDDE}" ShortID="960899841">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>41</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -485,6 +492,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Death_Body" ID="{CA5214E7-94A5-4AD2-892F-C8A941FEDF21}" ShortID="978433415">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>44</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -569,6 +583,13 @@
 									<ObjectLists/>
 								</Sound>
 								<Sound Name="Death_Soul" ID="{902FF36F-18BD-48EA-844C-6E86470CCD97}" ShortID="57180234">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>41</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -633,7 +654,7 @@
 						</Folder>
 						<Folder Name="Extra" ID="{4BCE6EFC-4007-4E96-AE55-2246CA57E1BE}" ShortID="446383272">
 							<ChildrenList>
-								<Sound Name="Cave Door" ID="{3DB07D75-7C37-4962-8FF7-094F21F0E860}" ShortID="455021828">
+								<RandomSequenceContainer Name="Cave Door" ID="{7E4D494A-2FD5-4F03-987F-013BEFBB050A}" ShortID="588115079">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
@@ -643,19 +664,78 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Grindstone_1" ID="{3B9F3190-7E9D-4FA3-B4DA-B184F71EFAB0}">
-											<Language>SFX</Language>
-											<AudioFile>Grindstone_1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="864083423"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Grindstone_1" ID="{3DB07D75-7C37-4962-8FF7-094F21F0E860}" ShortID="455021828">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grindstone_1" ID="{3B9F3190-7E9D-4FA3-B4DA-B184F71EFAB0}">
+													<Language>SFX</Language>
+													<AudioFile>Grindstone_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="864083423"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Grindstone_1" ID="{3B9F3190-7E9D-4FA3-B4DA-B184F71EFAB0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grindstone_2" ID="{D29EB6A9-5BBC-4342-ADBD-D902EEF536C9}" ShortID="1047669852">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grindstone_2" ID="{2E65FA42-753E-4F4D-B7FA-101E9125901F}">
+													<Language>SFX</Language>
+													<AudioFile>Grindstone_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="921200556"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Grindstone_2" ID="{2E65FA42-753E-4F4D-B7FA-101E9125901F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grindstone_3" ID="{5E0B19C6-1BFC-4C03-AD07-F65078FF1FF9}" ShortID="197979077">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{82F2C5BD-E49A-4757-9FD0-8EE351FDEEF1}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5AD26CB3-4F87-4905-8BA0-6C3A8D839168}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grindstone_3" ID="{F1825FD0-CB8E-41BC-8F3F-62809F91C63C}">
+													<Language>SFX</Language>
+													<AudioFile>Grindstone_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="752813211"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Grindstone_3" ID="{F1825FD0-CB8E-41BC-8F3F-62809F91C63C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Grindstone_1" ID="{3B9F3190-7E9D-4FA3-B4DA-B184F71EFAB0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
