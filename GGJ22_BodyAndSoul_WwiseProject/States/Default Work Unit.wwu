@@ -3,10 +3,38 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{E66713D3-F8F5-4B4A-AA1F-CD34B42B797A}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Location" ID="{B97BC8B9-D8A4-4991-8D64-D7F8F181A36F}">
+				<StateGroup Name="Pause" ID="{A8985B39-22CC-4509-875B-5154F033D649}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<State Name="None" ID="{48BE7972-1E94-4371-BC15-5419051F0A8C}"/>
+						<State Name="None" ID="{BED75C60-5B43-42D1-8F88-3EB12ED3BA24}"/>
+						<State Name="Playing" ID="{70151E45-C30C-4EF0-A0A6-46ED53B93176}"/>
+						<State Name="Paused" ID="{7C22E6E2-B9B9-4D7D-A46D-651330F5AD8A}"/>
 					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Rest" ID="{3C5305DE-C969-44A5-B42C-F938762FD927}">
+					<ChildrenList>
+						<State Name="None" ID="{1D2C1B3B-4C7B-4968-A248-1564ADF7658B}"/>
+						<State Name="Resting" ID="{CB7E3BCD-8F6D-4394-A210-4BBB4AA5D386}"/>
+						<State Name="Active" ID="{5DF791F4-D3A8-471A-96C9-F1844E7DE163}"/>
+					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Active" ID="{5DF791F4-D3A8-471A-96C9-F1844E7DE163}"/>
+							<EndState Name="Resting" ID="{CB7E3BCD-8F6D-4394-A210-4BBB4AA5D386}"/>
+							<Time>15</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Resting" ID="{CB7E3BCD-8F6D-4394-A210-4BBB4AA5D386}"/>
+							<EndState Name="Active" ID="{5DF791F4-D3A8-471A-96C9-F1844E7DE163}"/>
+							<Time>0.5</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

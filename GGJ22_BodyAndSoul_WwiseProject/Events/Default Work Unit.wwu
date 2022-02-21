@@ -5,23 +5,12 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{FA80FC59-A6A2-4A87-8039-A502D48FDEF3}" ShortID="1034000632">
 					<ChildrenList>
-						<Event Name="Play_Forest" ID="{13EC6EEE-1ED4-4663-A388-16EC88C6A157}">
+						<Event Name="Play_Music" ID="{229BEC17-F56E-46CE-972D-70E5E09A0C58}">
 							<ChildrenList>
-								<Action Name="" ID="{76477B57-DA58-4901-BF81-4B5D6EF002F6}" ShortID="933835722">
+								<Action Name="" ID="{9BEB25F4-B1DB-4434-AEFC-5DFFC23CB92E}" ShortID="961650902">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Forest" ID="{5A0F59BE-CE58-4B21-9A0E-DEF259EFDB14}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Cave" ID="{485DE27D-6891-44D4-9724-90E5AA6119FD}">
-							<ChildrenList>
-								<Action Name="" ID="{9D95C8BD-E7C6-46CB-8686-D625CE9246C2}" ShortID="730218696">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Caves" ID="{5AD73C77-7136-43AE-991B-C7AA00DB4A95}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+											<ObjectRef Name="BGM" ID="{99D5D37A-9E42-4197-A05F-80974FD6225A}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -89,17 +78,52 @@
 				</Folder>
 				<Folder Name="Enemy" ID="{46F78F34-7C76-4F1E-993B-914E2DF2666B}" ShortID="1002868328"/>
 				<Folder Name="Dialogue" ID="{8B039518-ADFA-4C22-8ECA-EBBC505D7F11}" ShortID="727285556"/>
-				<Event Name="Play_Caves_Playlist" ID="{46665C22-F539-4DBF-B954-99EFEF5CB587}">
+				<Folder Name="Pause Menu" ID="{26E38342-68A0-4924-B087-1D775E48A954}" ShortID="241497126">
 					<ChildrenList>
-						<Action Name="" ID="{2AC14994-6FD5-4645-A67C-B998EC1D4889}" ShortID="257154896">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Caves Playlist" ID="{76B52F68-E9BB-4983-9645-BFE78A4C9D70}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Open_Menu" ID="{A4DE4E72-859F-4A72-A6E7-A8D719A87EF0}">
+							<ChildrenList>
+								<Action Name="" ID="{8A719EB2-F70D-4EB3-858F-FCE045DAC6DD}" ShortID="854792965">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu_Open" ID="{04FAB9FE-F6FD-454F-B765-8B0DCC46057E}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3DB30CC5-09C7-48E8-AF51-8B8741127218}" ShortID="111716395">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Paused" ID="{7C22E6E2-B9B9-4D7D-A46D-651330F5AD8A}" WorkUnitID="{E66713D3-F8F5-4B4A-AA1F-CD34B42B797A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Close_Menu" ID="{5014AA46-BD4B-4B16-BED9-DA9C72324025}">
+							<ChildrenList>
+								<Action Name="" ID="{92864B89-F056-4F19-8D77-C06D3CEBD5F3}" ShortID="821867127">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu_Exit" ID="{8478DF40-3EF3-45CC-A9AA-981338535B61}" WorkUnitID="{03E8DA2F-E62A-46A6-AAF5-76B9FF3A7730}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{98EE6BDB-DB85-4574-84D5-D8002F20F96D}" ShortID="213541577">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Playing" ID="{70151E45-C30C-4EF0-A0A6-46ED53B93176}" WorkUnitID="{E66713D3-F8F5-4B4A-AA1F-CD34B42B797A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

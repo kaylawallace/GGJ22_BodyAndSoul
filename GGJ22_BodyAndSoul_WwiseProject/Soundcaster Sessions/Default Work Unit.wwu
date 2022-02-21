@@ -4,16 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{3481A6C1-BD2F-4F32-86B2-AC8D72C44E1E}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{B09145E6-AB6E-487C-910E-3E8710D2FDAD}">
-					<ModuleList>
-						<Module>
-							<ObjectRef Name="Play_Cave" ID="{485DE27D-6891-44D4-9724-90E5AA6119FD}" WorkUnitID="{9BCA8603-4054-4E38-BD2A-33F697CFC783}"/>
-							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Forest" ID="{13EC6EEE-1ED4-4663-A388-16EC88C6A157}" WorkUnitID="{9BCA8603-4054-4E38-BD2A-33F697CFC783}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="BodySoul_Rest" ID="{6D4949E4-18C8-4477-85EA-09738B3E586D}"/>
@@ -21,14 +11,15 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BodySoul_Distance" ID="{3DD490A8-EE2C-4E26-BCBC-340DC58362CB}"/>
-							<Value>9</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{48BE7972-1E94-4371-BC15-5419051F0A8C}"/>
+						<CurrentStateRef Name="Playing" ID="{70151E45-C30C-4EF0-A0A6-46ED53B93176}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Cave" ID="{FCE93130-D27C-49A8-B551-2F545BCCA0A1}"/>
+						<CurrentSwitchRef Name="Forest" ID="{8CF03DF0-BBA6-4EFC-B75D-DCE5877C87D0}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{14C3A50E-650B-4B3A-B7BE-152D7B4CE945}" SchemaVersion="103">
+	<Triggers>
+		<WorkUnit Name="Music" ID="{14C3A50E-650B-4B3A-B7BE-152D7B4CE945}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Menu" ID="{328D16E0-7112-4D2D-B7F0-503AA82BE193}" ShortID="510995302">
+					<ChildrenList>
+						<Trigger Name="Menu_Open" ID="{A96C2C25-51F3-4D90-8D8F-8B02EF51E8A1}"/>
+						<Trigger Name="Menu_Close" ID="{1D4CE579-6858-456F-B450-930A15A0A98D}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>
